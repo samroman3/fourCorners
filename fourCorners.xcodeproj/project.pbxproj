@@ -15,7 +15,7 @@
 		3A6111EF232C2217001F31FE /* fourCornersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6111EE232C2217001F31FE /* fourCornersTests.swift */; };
 		3A6111FA232C2217001F31FE /* fourCornersUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6111F9232C2217001F31FE /* fourCornersUITests.swift */; };
 		EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */; };
-		EAAC4EC7232C3E6F00B53BE0 /* emptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* emptyFile.swift */; };
+		EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 		3A6111F9232C2217001F31FE /* fourCornersUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fourCornersUITests.swift; sourceTree = "<group>"; };
 		3A6111FB232C2217001F31FE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyFile.swift; sourceTree = "<group>"; };
-		EAAC4EC6232C3E6F00B53BE0 /* emptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyFile.swift; sourceTree = "<group>"; };
+		EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,7 +140,7 @@
 		EAAC4EC0232C29E300B53BE0 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				EAAC4EC6232C3E6F00B53BE0 /* emptyFile.swift */,
+				EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -303,7 +303,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A6111DC232C2214001F31FE /* ViewController.swift in Sources */,
-				EAAC4EC7232C3E6F00B53BE0 /* emptyFile.swift in Sources */,
+				EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */,
 				EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */,
 				3A6111DA232C2214001F31FE /* AppDelegate.swift in Sources */,
 			);
