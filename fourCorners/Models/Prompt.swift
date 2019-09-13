@@ -10,14 +10,13 @@ import Foundation
 
 struct Prompt {
     var prompt: String
-    var id: Int
-    var created: String
+
+   static let mvpPromptArray = [prompt1, prompt2, prompt3, prompt4, prompt5]
 }
 
-let prompt1 = Prompt(prompt: "Find a No. 2 pencil", id: 1, created: "9-13-19")
-let prompt2 = Prompt(prompt: "Run to a corner of the room and run back", id: 1, created: "9-13-19")
-let prompt3 = Prompt(prompt: "Hug a mother with their consent", id: 1, created: "9-13-19")
-let prompt4 = Prompt(prompt: "High five a member of Pursuit staff", id: 1, created: "9-13-19")
-let prompt5 = Prompt(prompt: "Do five jumping jacks", id: 1, created: "9-13-19")
 
-let mvpPromptArray = [prompt1, prompt2, prompt3, prompt4, prompt5]
+private let prompt1 = Prompt(prompt: "Find a No. 2 pencil")
+private let prompt2 = Prompt(prompt: "Run to a corner of the room and run back")
+private let prompt3 = Prompt(prompt: "Hug a mother (with their consent)")
+private let prompt4 = Prompt(prompt: "High five a member of Pursuit staff")
+private let prompt5 = Prompt(prompt: "Do five jumping jacks")
