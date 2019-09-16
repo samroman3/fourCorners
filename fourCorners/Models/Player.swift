@@ -45,11 +45,13 @@ struct Player {
         }
     }
     
+
     static func winningLabel() -> String {
         if Player.winningCondition() != nil {
             switch Player.winningCondition()!.count {
             case 1:
                 return "Winner : \(Player.winningCondition()![0].name)"
+
             case 2:
                 return "Winners : \(Player.winningCondition()![0].name) and \(Player.winningCondition()![1].name)"
                 
@@ -60,13 +62,16 @@ struct Player {
                 return "Winners : \(Player.winningCondition()![0].name),\(Player.winningCondition()![1].name),\(Player.winningCondition()![2].name) and \(Player.winningCondition()![3].name)"
                 
             default:
-                return "not a player"
+
+               return "not a player"
+
             }
         } else {
             return Prompt.randomPrompt()
         }
     }
-    static func roundEndLabel(player:Int) -> String {
+   static func roundEndLabel(player:Int) -> String {
+
         switch player {
         case 1:
             return "Good job \(Player.playerOne.name)"
@@ -86,10 +91,12 @@ struct Player {
         playerTwo.score = 0
         playerThree.score = 0
         playerFour.score = 0
+
         
     }
     
 }
+
 
 
 
