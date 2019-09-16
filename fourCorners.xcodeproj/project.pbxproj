@@ -22,6 +22,7 @@
 		EAAC4ECD23300E5B00B53BE0 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */; };
 		EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */; };
 		EAAC4ED123300F9F00B53BE0 /* TwoPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */; };
+		EAAC4ED3233010A100B53BE0 /* ThreePlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ED2233010A100B53BE0 /* ThreePlayersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchScreenViewController.swift; path = ../Views/LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersViewController.swift; sourceTree = "<group>"; };
+		EAAC4ED2233010A100B53BE0 /* ThreePlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThreePlayersViewController.swift; path = fourCorners/Controllers/ThreePlayersViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +147,7 @@
 				EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */,
 				EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */,
 				EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */,
+				EAAC4ED2233010A100B53BE0 /* ThreePlayersViewController.swift */,
 				3A6111DB232C2214001F31FE /* ViewController.swift */,
 			);
 			path = Controllers;
@@ -318,6 +321,7 @@
 			files = (
 				3A6111DC232C2214001F31FE /* ViewController.swift in Sources */,
 				EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */,
+				EAAC4ED3233010A100B53BE0 /* ThreePlayersViewController.swift in Sources */,
 				EAAC4ED123300F9F00B53BE0 /* TwoPlayersViewController.swift in Sources */,
 				EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */,
 				69072275232FC8CE00514145 /* Player.swift in Sources */,
