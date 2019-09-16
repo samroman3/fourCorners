@@ -19,7 +19,7 @@ struct Player {
     static var playerThree = Player(name: "Player Three", score: 0)
     static var playerFour = Player(name: "Player Four", score: 0)
     
-    mutating func increaseScore (player: Int) {
+    static func increaseScore (player: Int) {
         switch player {
             case 1:
                 Player.playerOne.score += 1
@@ -34,7 +34,7 @@ struct Player {
         }
     }
     
-    func winningCondition() -> [Player]? {
+    static func winningCondition() -> [Player]? {
         let roundsPassed = [Player.playerOne.score,Player.playerTwo.score,Player.playerThree.score,Player.playerFour.score].reduce(0,+)
         if roundsPassed >= 5 {
             let playersSortedByScore = [Player.playerOne,Player.playerTwo,Player.playerThree,Player.playerFour].sorted(by: {$0.score > $1.score} )
