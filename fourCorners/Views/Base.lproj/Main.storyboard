@@ -79,6 +79,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-Pj-SJK">
                                         <rect key="frame" x="0.0" y="60" width="94" height="30"/>
                                         <state key="normal" title="Four Players"/>
+                                        <connections>
+                                            <segue destination="BYZ-38-t0r" kind="show" identifier="settingsToFourPlayersSegue" id="I1a-qP-j4n"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -164,22 +167,22 @@
             </objects>
             <point key="canvasLocation" x="2857" y="-43"/>
         </scene>
-        <!--View Controller-->
+        <!--Four Players View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="fourCorners" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="FourPlayersViewController" customModule="fourCorners" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="promptLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4n-2L-7up">
-                                <rect key="frame" x="20" y="443" width="374" height="20.5"/>
+                                <rect key="frame" x="20" y="465" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-ng-P64">
-                                <rect key="frame" x="0.0" y="44" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="88" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="wOv-Se-X0x"/>
                                     <constraint firstAttribute="width" constant="100" id="xy7-f3-PNw"/>
@@ -190,7 +193,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svh-WB-NDC">
-                                <rect key="frame" x="314" y="44" width="100" height="100"/>
+                                <rect key="frame" x="314" y="88" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="BSK-EB-klY"/>
                                     <constraint firstAttribute="width" constant="100" id="dzF-ae-UQQ"/>
@@ -223,7 +226,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POC-yC-rnR">
-                                <rect key="frame" x="157" y="483.5" width="100" height="50"/>
+                                <rect key="frame" x="157" y="505.5" width="100" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="Qvg-o4-yIo"/>
                                     <constraint firstAttribute="height" constant="50" id="cdf-Dw-xxG"/>
@@ -234,7 +237,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq0-ir-xHq">
-                                <rect key="frame" x="157" y="373" width="100" height="50"/>
+                                <rect key="frame" x="157" y="395" width="100" height="50"/>
                                 <state key="normal" title="startRound"/>
                             </button>
                         </subviews>
