@@ -37,7 +37,6 @@ struct Player {
     }
     
     func winningCondition() -> Player {
-    
         let roundsPassed = [Player.playerOne.score,Player.playerTwo.score,Player.playerThree.score,Player.playerFour.score].reduce(0,+)
         if roundsPassed >= 5 {
             let players = [Player.playerOne,Player.playerTwo,Player.playerThree,Player.playerFour].sorted(by: {$0.score > $1.score} )
