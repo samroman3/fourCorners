@@ -20,11 +20,15 @@ class FourPlayersViewController: UIViewController {
                 promptLabel.text = Player.winningLabel()
                 startRoundButton.isHidden = true
                 startRoundButton.isEnabled = false
+                self.time = 4
                 gameOver()
             }
             
         }
     }
+    
+    var timer = Timer()
+    var time = 4
     
 
     //MARK: Outlet Collection
@@ -59,8 +63,18 @@ class FourPlayersViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     @IBAction func startAction(_ sender: UIButton!) {
-        gameStart()
-
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
+    }
+    
+    @objc func timeAction() {
+        promptLabel.isHidden = false
+        time -= 1
+        promptLabel.text = String(time)
+        
+        if time == 0 {
+            timer.invalidate()
+            gameStart()
+        }
     }
     
     func gameStart(){
@@ -103,27 +117,9 @@ class FourPlayersViewController: UIViewController {
 
 }
 
-/*import UIKit
- 
- class ViewController: UIViewController {
- var winners: [Player]? {
- didSet {
- 
- 
- disableAll()
- if self.winners != nil {
- promptLabel.isHidden = false
- promptLabel.text = Player.winningLabel()
- startRoundButton.isHidden = true
- startRoundButton.isEnabled = false
- gameOver()
- }
- 
- }
- }
- //    }
- 
- 
+
+
+/*
  
  //MARK: Outlet Collection
  
@@ -133,52 +129,42 @@ class FourPlayersViewController: UIViewController {
  @IBAction func buttonPress(_ sender: UIButton) {
  //Switch to Increase score based on sender.tag of player button
  Player.increaseScore(player: sender.tag)
- startRoundButton.isHidden = false
- startRoundButton.isEnabled = true
- 
- promptLabel.text = Player.roundEndLabel(player: sender.tag)
- promptLabel.isHidden = false
  winners = Player.winningCondition()
- 
- 
- 
- 
- 
+ promptLabel.text = Prompt.mvpPromptArray.randomElement()!.prompt
+ if winners != nil {
+ promptLabel.text = "\(winners![0].name) wins!"
+ gameOver()
+ }
  }
  
- 
- @IBOutlet weak var startRoundButton: UIButton!
  
  
  @IBOutlet weak var promptLabel: UILabel!
  
  @IBOutlet weak var startButton: UIButton!
  
- 
- @IBAction func startRoundButton(_ sender: UIButton) {
- enableAll()
- promptLabel.text = Player.winningLabel()
- startRoundButton.isHidden = true
- startRoundButton.isEnabled = false
- 
- }
- 
- 
  @IBAction func startAction(_ sender: UIButton!) {
- gameStart()
- 
+ timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
  }
  
- func gameStart(){
+ @objc func timeAction() {
+ promptLabel.isHidden = false
+ time -= 1
+ promptLabel.text = String(time)
+ 
+ if time == 0 {
+ timer.invalidate()
+ gameStart()
+ }
+ }
+ 
+ func gameStart() {
  self.startButton.isEnabled = false
  self.startButton.isHidden = true
- startRoundButton.isHidden = true
- startRoundButton.isEnabled = false
  promptLabel.isHidden = false
- promptLabel.text? = Player.winningLabel()
- 
+ promptLabel.text? =
+ Prompt.mvpPromptArray.randomElement()!.prompt
  enableAll()
- 
  }
  
  func gameOver(){
@@ -191,23 +177,23 @@ class FourPlayersViewController: UIViewController {
  }
  
  func disableAll(){
- collection.forEach({$0.isEnabled = false})
+ for sender in collection {
+ sender.isEnabled = false
+ }
  }
  
  func enableAll(){
- collection.forEach({$0.isEnabled = true})
+ for sender in collection {
+ sender.isEnabled = true
+ }
  }
  
  override func viewDidLoad() {
  disableAll()
  promptLabel.isHidden = true
- startRoundButton.isHidden = true
  super.viewDidLoad()
  // Do any additional setup after loading the view.
  }
  
  
- }
- 
- 
-*/
+ }*/
