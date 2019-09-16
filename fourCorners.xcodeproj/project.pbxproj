@@ -18,6 +18,8 @@
 		69072275232FC8CE00514145 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69072274232FC8CE00514145 /* Player.swift */; };
 		EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */; };
 		EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
+		EAAC4EC8232FDE5100B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
+		EAAC4EC9232FDE5A00B53BE0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69072274232FC8CE00514145 /* Player.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -322,6 +324,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A6111EF232C2217001F31FE /* fourCornersTests.swift in Sources */,
+				EAAC4EC9232FDE5A00B53BE0 /* Player.swift in Sources */,
+				EAAC4EC8232FDE5100B53BE0 /* Prompt.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
