@@ -10,21 +10,28 @@ import UIKit
 
 class LaunchScreenViewController: UIViewController {
 
+    @IBOutlet weak var topLeftImage: UIImageView!
+    @IBOutlet weak var topRightImage: UIImageView!
+    @IBOutlet weak var bottomLeftImage: UIImageView!
+    @IBOutlet weak var bottomRightImage: UIImageView!
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        configureImages()
+        configureLabels()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configureImages() {
+        topLeftImage.image = UIImage(named: "topLeftBKGD")
+        topRightImage.image = UIImage(named: "topRightBKGD")
+        bottomLeftImage.image = UIImage(named: "bottomLeftBKGD")
+        bottomRightImage.image = UIImage(named: "bottomRightBGKD")
     }
-    */
+    
+    private func configureLabels() {
+        nameLabel.text = "Four Corners"
+    }
 
 }
