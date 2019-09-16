@@ -24,37 +24,49 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-ng-P64">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FFW-ng-P64">
                                 <rect key="frame" x="0.0" y="44" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="wOv-Se-X0x"/>
                                     <constraint firstAttribute="width" constant="100" id="xy7-f3-PNw"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hfE-89-oxd"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svh-WB-NDC">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Svh-WB-NDC">
                                 <rect key="frame" x="314" y="44" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="BSK-EB-klY"/>
                                     <constraint firstAttribute="width" constant="100" id="dzF-ae-UQQ"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zsz-JY-g2i"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZm-kd-x0X">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qZm-kd-x0X">
                                 <rect key="frame" x="0.0" y="762" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="EkJ-bX-Lt5"/>
                                     <constraint firstAttribute="width" constant="100" id="cqK-WC-3oX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zHf-GV-qMm"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYI-Dj-XWX">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uYI-Dj-XWX">
                                 <rect key="frame" x="314" y="762" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="dLk-ko-yda"/>
                                     <constraint firstAttribute="width" constant="100" id="mIU-bf-zTp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="buttonPress:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pb4-MD-UZ9"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POC-yC-rnR">
                                 <rect key="frame" x="157" y="483.5" width="100" height="50"/>
@@ -63,6 +75,9 @@
                                     <constraint firstAttribute="height" constant="50" id="cdf-Dw-xxG"/>
                                 </constraints>
                                 <state key="normal" title="Start"/>
+                                <connections>
+                                    <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eqO-lN-WcP"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -83,6 +98,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="promptLabel" destination="n4n-2L-7up" id="nBJ-BG-QX8"/>
+                        <outlet property="startButton" destination="POC-yC-rnR" id="4fw-NO-B0Y"/>
+                        <outletCollection property="collection" destination="FFW-ng-P64" collectionClass="NSMutableArray" id="tup-6R-nhY"/>
+                        <outletCollection property="collection" destination="qZm-kd-x0X" collectionClass="NSMutableArray" id="RZP-Zs-gF6"/>
+                        <outletCollection property="collection" destination="Svh-WB-NDC" collectionClass="NSMutableArray" id="qfe-Lt-8iS"/>
+                        <outletCollection property="collection" destination="uYI-Dj-XWX" collectionClass="NSMutableArray" id="vEc-er-bmP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
