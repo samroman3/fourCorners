@@ -15,6 +15,7 @@ class LaunchScreenViewController: UIViewController {
     @IBOutlet weak var bottomLeftImage: UIImageView!
     @IBOutlet weak var bottomRightImage: UIImageView!
     
+    @IBOutlet weak var nameLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +31,7 @@ class LaunchScreenViewController: UIViewController {
     }
     
     private func configureLabels() {
-        
+        nameLabel.text = "Four Corners"
     }
 
 }
