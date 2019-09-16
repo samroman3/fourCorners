@@ -21,6 +21,7 @@
 		EAAC4EC9232FDE5A00B53BE0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69072274232FC8CE00514145 /* Player.swift */; };
 		EAAC4ECD23300E5B00B53BE0 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */; };
 		EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */; };
+		EAAC4ED123300F9F00B53BE0 /* TwoPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchScreenViewController.swift; path = ../Views/LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,9 +142,10 @@
 		EAAC4EBF232C29DB00B53BE0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A6111DB232C2214001F31FE /* ViewController.swift */,
 				EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */,
 				EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */,
+				EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */,
+				3A6111DB232C2214001F31FE /* ViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			files = (
 				3A6111DC232C2214001F31FE /* ViewController.swift in Sources */,
 				EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */,
+				EAAC4ED123300F9F00B53BE0 /* TwoPlayersViewController.swift in Sources */,
 				EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */,
 				69072275232FC8CE00514145 /* Player.swift in Sources */,
 				EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */,
