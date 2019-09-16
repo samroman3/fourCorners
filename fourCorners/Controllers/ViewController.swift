@@ -9,17 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-    
-    var winners: [Player]? {
+   var winners: [Player]? {
         didSet {
-            if winners != nil {
-                promptLabel.text = "\(winners![0].name) wins!"
+            
+           
+            disableAll()
+            if self.winners != nil {
+                promptLabel.isHidden = false
+                promptLabel.text = Player.winningLabel()
+               startRoundButton.isHidden = true
+                startRoundButton.isEnabled = false
                 gameOver()
-                
             }
-          
-        }
-    }
+            
+           }
+       }
+//    }
+    
     
 
     //MARK: Outlet Collection
@@ -30,22 +36,36 @@ class ViewController: UIViewController {
     @IBAction func buttonPress(_ sender: UIButton) {
         //Switch to Increase score based on sender.tag of player button
     Player.increaseScore(player: sender.tag)
-    winners = Player.winningCondition()
-    promptLabel.text = Prompt.mvpPromptArray.randomElement()!.prompt
-    if winners != nil {
-            promptLabel.text = "\(winners![0].name) wins!"
-            gameOver()
-            
-        }
+        startRoundButton.isHidden = false
+        startRoundButton.isEnabled = true
+        
+        promptLabel.text = Player.roundEndLabel(player: sender.tag)
+        promptLabel.isHidden = false
+         winners = Player.winningCondition()
+        
+   
+    
 
 
     }
     
     
+    @IBOutlet weak var startRoundButton: UIButton!
+    
     
     @IBOutlet weak var promptLabel: UILabel!
     
     @IBOutlet weak var startButton: UIButton!
+    
+   
+    @IBAction func startRoundButton(_ sender: UIButton) {
+   enableAll()
+        promptLabel.text = Player.winningLabel()
+        startRoundButton.isHidden = true
+        startRoundButton.isEnabled = false
+        
+    }
+    
     
     @IBAction func startAction(_ sender: UIButton!) {
         gameStart()
@@ -55,10 +75,13 @@ class ViewController: UIViewController {
     func gameStart(){
         self.startButton.isEnabled = false
         self.startButton.isHidden = true
+        startRoundButton.isHidden = true
+        startRoundButton.isEnabled = false
         promptLabel.isHidden = false
-        promptLabel.text? =
-        Prompt.mvpPromptArray.randomElement()!.prompt
+        promptLabel.text? = Player.winningLabel()
+      
         enableAll()
+        
     }
     
     func gameOver(){
@@ -71,20 +94,17 @@ class ViewController: UIViewController {
     }
     
     func disableAll(){
-        for sender in collection {
-            sender.isEnabled = false
-        }
+        collection.forEach({$0.isEnabled = false})
     }
     
     func enableAll(){
-        for sender in collection {
-            sender.isEnabled = true
-        }
+      collection.forEach({$0.isEnabled = true})
     }
     
     override func viewDidLoad() {
         disableAll()
         promptLabel.isHidden = true
+        startRoundButton.isHidden = true
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
