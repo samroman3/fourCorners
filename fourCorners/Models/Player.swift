@@ -45,9 +45,23 @@ struct Player {
                 if player.score == playersSortedByScore[0].score {
                     winners.append(player)
                     return winners
+                    
                 }
             }
         }
         return nil
     }
+    
+    
+    static func resetScore(){
+        playerOne.score = 0
+        playerTwo.score = 0
+        playerThree.score = 0
+        playerFour.score = 0
 }
+}
+
+
+
+
+
