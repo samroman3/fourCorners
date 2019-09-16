@@ -10,6 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    var winners: [Player]? {
+        didSet {
+            if winners != nil {
+            promptLabel.text = "\(winners)"
+            gameOver()
+            }
+        }
+    }
+    
 
     //MARK: Outlet Collection
     
@@ -18,19 +27,9 @@ class ViewController: UIViewController {
 
     @IBAction func buttonPress(_ sender: UIButton) {
         //Switch to Increase score based on sender.tag of player button
-        
-//        switch sender.tag {
-//        case 1:
-//            Players.playerOne.increaseScore(player: 1)
-//        case 2:
-//            Players.playerTwo.increaseScore(player: 2)
-//        case 3:
-//            Players.playerThree.increaseScore(player: 3)
-//        case 4:
-//            Players.playerFour.increaseScore(player: 4)
-//        default:
-//           return
-//        }
+     Player.increaseScore(player: sender.tag)
+     
+     winners = Player.winningCondition()
 
     }
     
@@ -40,9 +39,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var startButton: UIButton!
     
+    @IBAction func startAction(_ sender: UIButton!) {
+        gameStart()
+    }
     
     func gameStart(){
         self.startButton.isEnabled = false
+        self.startButton.isHidden = true
         promptLabel.isHidden = false
         promptLabel.text? = Prompt.mvpPromptArray.randomElement()!.prompt
         
@@ -52,12 +55,11 @@ class ViewController: UIViewController {
         self.startButton.isHidden = false
         self.startButton.isEnabled = true
         
+        
     }
     
-//    func checkWin(){
-//        Players.winningCondition(<#T##Players#>)
-//    }
-//
+   
+
     
     override func viewDidLoad() {
         promptLabel.text = ""
