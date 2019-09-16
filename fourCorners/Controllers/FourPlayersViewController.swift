@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class FourPlayersViewController: UIViewController {
     
     var winners: [Player]? {
         didSet {
