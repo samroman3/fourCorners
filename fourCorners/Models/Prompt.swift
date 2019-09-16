@@ -1,18 +1,14 @@
-//
-//  emptyFile.swift
-//  fourCorners
-//
-//  Created by Sunni Tang on 9/13/19.
-//  Copyright © 2019 Sam Roman. All rights reserved.
-//
-
 import Foundation
 
 struct Prompt {
     var prompt: String
 
-   static let mvpPromptArray = [prompt1, prompt2, prompt3, prompt4, prompt5]
-   static func randomPrompt() -> String {
+    
+    static let mvpPromptArray = [prompt1, prompt2, prompt3, prompt4, prompt5]
+    static func randomPrompt() -> String {
+
+
+
         return Prompt.mvpPromptArray.randomElement()?.prompt ?? "No prompt selected"
     }
 }

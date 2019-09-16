@@ -1,11 +1,3 @@
-//
-//  Scores.swift
-//  fourCorners
-//
-//  Created by Phoenix McKnight on 9/16/19.
-//  Copyright © 2019 Sam Roman. All rights reserved.
-//
-
 import Foundation
 import UIKit
 
@@ -23,16 +15,16 @@ struct Player {
     
     static func increaseScore (player: Int) {
         switch player {
-            case 1:
-                Player.playerOne.score += 1
-            case 2:
-                Player.playerTwo.score += 1
-            case 3:
-                Player.playerThree.score += 1
-            case 4:
-                Player.playerFour.score += 1
-            default:
-                print("not a player")
+        case 1:
+            Player.playerOne.score += 1
+        case 2:
+            Player.playerTwo.score += 1
+        case 3:
+            Player.playerThree.score += 1
+        case 4:
+            Player.playerFour.score += 1
+        default:
+            print("not a player")
         }
     }
     
@@ -53,11 +45,13 @@ struct Player {
         }
     }
     
-   static func winningLabel() -> String {
+
+    static func winningLabel() -> String {
         if Player.winningCondition() != nil {
             switch Player.winningCondition()!.count {
             case 1:
-               return "Winner : \(Player.winningCondition()![0].name)"
+                return "Winner : \(Player.winningCondition()![0].name)"
+
             case 2:
                 return "Winners : \(Player.winningCondition()![0].name) and \(Player.winningCondition()![1].name)"
                 
@@ -68,13 +62,16 @@ struct Player {
                 return "Winners : \(Player.winningCondition()![0].name),\(Player.winningCondition()![1].name),\(Player.winningCondition()![2].name) and \(Player.winningCondition()![3].name)"
                 
             default:
+
                return "not a player"
+
             }
         } else {
             return Prompt.randomPrompt()
         }
     }
    static func roundEndLabel(player:Int) -> String {
+
         switch player {
         case 1:
             return "Good job \(Player.playerOne.name)"
@@ -94,10 +91,13 @@ struct Player {
         playerTwo.score = 0
         playerThree.score = 0
         playerFour.score = 0
-       
-}
+
+        
+    }
     
 }
+
+
 
 
 

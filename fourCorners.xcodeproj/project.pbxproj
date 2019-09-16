@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A6111DA232C2214001F31FE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6111D9232C2214001F31FE /* AppDelegate.swift */; };
-		3A6111DC232C2214001F31FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6111DB232C2214001F31FE /* ViewController.swift */; };
+		3A6111DC232C2214001F31FE /* FourPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6111DB232C2214001F31FE /* FourPlayersViewController.swift */; };
 		3A6111DF232C2214001F31FE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6111DD232C2214001F31FE /* Main.storyboard */; };
 		3A6111E1232C2217001F31FE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A6111E0232C2217001F31FE /* Assets.xcassets */; };
 		3A6111E4232C2217001F31FE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6111E2232C2217001F31FE /* LaunchScreen.storyboard */; };
@@ -20,6 +20,10 @@
 		EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
 		EAAC4EC8232FDE5100B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
 		EAAC4EC9232FDE5A00B53BE0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69072274232FC8CE00514145 /* Player.swift */; };
+		EAAC4ECD23300E5B00B53BE0 /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */; };
+		EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */; };
+		EAAC4ED123300F9F00B53BE0 /* TwoPlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */; };
+		EAAC4ED3233010A100B53BE0 /* ThreePlayersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4ED2233010A100B53BE0 /* ThreePlayersViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +46,7 @@
 /* Begin PBXFileReference section */
 		3A6111D6232C2214001F31FE /* fourCorners.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fourCorners.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6111D9232C2214001F31FE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A6111DB232C2214001F31FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		3A6111DB232C2214001F31FE /* FourPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourPlayersViewController.swift; sourceTree = "<group>"; };
 		3A6111DE232C2214001F31FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A6111E0232C2217001F31FE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A6111E3232C2217001F31FE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +61,10 @@
 		69072274232FC8CE00514145 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyFile.swift; sourceTree = "<group>"; };
 		EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
+		EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchScreenViewController.swift; path = ../Views/LaunchScreenViewController.swift; sourceTree = "<group>"; };
+		EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoPlayersViewController.swift; sourceTree = "<group>"; };
+		EAAC4ED2233010A100B53BE0 /* ThreePlayersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ThreePlayersViewController.swift; path = fourCorners/Controllers/ThreePlayersViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,7 +146,11 @@
 		EAAC4EBF232C29DB00B53BE0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				3A6111DB232C2214001F31FE /* ViewController.swift */,
+				EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */,
+				EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */,
+				EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */,
+				EAAC4ED2233010A100B53BE0 /* ThreePlayersViewController.swift */,
+				3A6111DB232C2214001F31FE /* FourPlayersViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,11 +322,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A6111DC232C2214001F31FE /* ViewController.swift in Sources */,
+				3A6111DC232C2214001F31FE /* FourPlayersViewController.swift in Sources */,
 				EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */,
+				EAAC4ED3233010A100B53BE0 /* ThreePlayersViewController.swift in Sources */,
+				EAAC4ED123300F9F00B53BE0 /* TwoPlayersViewController.swift in Sources */,
+				EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */,
 				69072275232FC8CE00514145 /* Player.swift in Sources */,
 				521560C6232FDC1600F2577B /* Timer.swift in Sources */,
 				EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */,
+				EAAC4ECD23300E5B00B53BE0 /* LaunchScreenViewController.swift in Sources */,
 				3A6111DA232C2214001F31FE /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
