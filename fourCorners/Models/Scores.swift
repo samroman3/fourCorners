@@ -9,38 +9,38 @@
 import Foundation
 import UIKit
 
-struct Players {
+struct Player {
     
     var name: String
     var score: Int
     
-    static var playerOne = Players(name: "Player One", score: 0)
-    static var playerTwo = Players(name: "Player Two", score: 0)
-    static var playerThree = Players(name: "Player Three", score: 0)
-    static var playerFour = Players(name: "Player Four", score: 0)
+    static var playerOne = Player(name: "Player One", score: 0)
+    static var playerTwo = Player(name: "Player Two", score: 0)
+    static var playerThree = Player(name: "Player Three", score: 0)
+    static var playerFour = Player(name: "Player Four", score: 0)
     
-    let players: [Players] = []
+    let players: [Player] = []
     
     mutating func increaseScore (player: Int) {
         switch player {
             case 1:
-                Players.playerOne.score += 1
+                Player.playerOne.score += 1
             case 2:
-                Players.playerTwo.score += 1
+                Player.playerTwo.score += 1
             case 3:
-                Players.playerThree.score += 1
+                Player.playerThree.score += 1
             case 4:
-                Players.playerFour.score += 1
+                Player.playerFour.score += 1
             default:
                 print("not a player")
         }
     }
     
-    func winningCondition() -> Players {
+    func winningCondition() -> Player {
     
-        let roundsPassed = [Players.playerOne.score,Players.playerTwo.score,Players.playerThree.score,Players.playerFour.score].reduce(0,+)
+        let roundsPassed = [Player.playerOne.score,Player.playerTwo.score,Player.playerThree.score,Player.playerFour.score].reduce(0,+)
         if roundsPassed >= 5 {
-            let players = [Players.playerOne,Players.playerTwo,Players.playerThree,Players.playerFour].sorted(by: {$0.score > $1.score} )
+            let players = [Player.playerOne,Player.playerTwo,Player.playerThree,Player.playerFour].sorted(by: {$0.score > $1.score} )
         }
          return players[0]
     }
