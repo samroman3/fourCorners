@@ -31,20 +31,10 @@ class LaunchScreenViewController: UIViewController {
         
         super.viewDidLoad()
         setSounds()
-        configureImages()
-        configureLabels()
         navigationController?.navigationBar.isHidden = true
     }
     
-    private func configureImages() {
-        topLeftImage.image = UIImage(named: "topLeftBKGD")
-        topRightImage.image = UIImage(named: "topRightBKGD")
-        bottomLeftImage.image = UIImage(named: "bottomLeftBKGD")
-        bottomRightImage.image = UIImage(named: "bottomRightBGKD")
-    }
+
     
-    private func configureLabels() {
-        nameLabel.text = "Four Corners"
-    }
 
 }
