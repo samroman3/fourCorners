@@ -70,7 +70,7 @@ class FourPlayersViewController: UIViewController {
     }
     
     @IBAction func exitButton(_ sender: UIButton) {
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: false)
     }
     
     @IBAction func startAction(_ sender: UIButton!) {

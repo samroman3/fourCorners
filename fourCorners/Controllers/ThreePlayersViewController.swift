@@ -118,7 +118,7 @@ class ThreePlayersViewController: UIViewController {
     
     @IBAction func exitGameButtonPressed(_ sender: Any) {
         
-        navigationController?.popToRootViewController(animated: true)
+        navigationController?.popToRootViewController(animated: false)
     }
     
     
