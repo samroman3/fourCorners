@@ -35,6 +35,10 @@ class FourPlayersViewController: UIViewController {
 
     //MARK: Outlet Collection
     
+    @IBOutlet weak var promptLabel: UILabel!
+    
+    @IBOutlet weak var startButton: UIButton!
+    
     @IBOutlet var collection: [UIButton]!
      @IBOutlet weak var startRoundButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
@@ -68,15 +72,8 @@ class FourPlayersViewController: UIViewController {
         navigationController?.popToRootViewController(animated: true)
     }
     
-    
-    
-    
-    @IBOutlet weak var promptLabel: UILabel!
-    
-    @IBOutlet weak var startButton: UIButton!
-    
     @IBAction func startAction(_ sender: UIButton!) {
-     time = 4
+        time = 4
         startButton.isEnabled = false
         startButton.isHidden = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
@@ -90,12 +87,29 @@ class FourPlayersViewController: UIViewController {
         if time == 0 {
             timer.invalidate()
             //startButton.isHidden = true
-           // startButton.isEnabled = false
+            // startButton.isEnabled = false
             gameStart()
-
+            
             
         }
     }
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
+        disableAll()
+        promptLabel.isHidden = true
+        startRoundButton.isHidden = true
+        exitButton.isHidden = true
+        exitButton.isEnabled = false
+        // Do any additional setup after loading the view.
+    }
+    
+    
+    
+    
+    
     
     func gameStart(){
 //        self.startButton.isEnabled = false
@@ -126,17 +140,7 @@ class FourPlayersViewController: UIViewController {
         collection.forEach({$0.isEnabled = true})
     }
     
-    override func viewDidLoad() {
-        
-        super.viewDidLoad()
-        navigationController?.navigationBar.isHidden = true
-        disableAll()
-        promptLabel.isHidden = true
-        startRoundButton.isHidden = true
-        exitButton.isHidden = true
-        exitButton.isEnabled = false
-        // Do any additional setup after loading the view.
-    }
+    
 
 
 }
