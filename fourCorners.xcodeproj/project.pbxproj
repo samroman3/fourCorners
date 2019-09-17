@@ -22,6 +22,7 @@
 		3A61121823313F37001F31FE /* synthOne.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A61121723313F37001F31FE /* synthOne.wav */; };
 		3A61121A23313F3D001F31FE /* synthThree.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A61121923313F3D001F31FE /* synthThree.wav */; };
 		3A61121C23313F42001F31FE /* synthTwo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A61121B23313F42001F31FE /* synthTwo.wav */; };
+		520DDD4C23318A0F000C624B /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DDD4B23318A0F000C624B /* Button.swift */; };
 		521560C6232FDC1600F2577B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521560C5232FDC1600F2577B /* Timer.swift */; };
 		69072275232FC8CE00514145 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69072274232FC8CE00514145 /* Player.swift */; };
 		EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */; };
@@ -73,6 +74,7 @@
 		3A61121723313F37001F31FE /* synthOne.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = synthOne.wav; sourceTree = "<group>"; };
 		3A61121923313F3D001F31FE /* synthThree.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = synthThree.wav; sourceTree = "<group>"; };
 		3A61121B23313F42001F31FE /* synthTwo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = synthTwo.wav; sourceTree = "<group>"; };
+		520DDD4B23318A0F000C624B /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		521560C5232FDC1600F2577B /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		69072274232FC8CE00514145 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyFile.swift; sourceTree = "<group>"; };
@@ -199,6 +201,7 @@
 				69072274232FC8CE00514145 /* Player.swift */,
 				521560C5232FDC1600F2577B /* Timer.swift */,
 				3A611212233138F0001F31FE /* Sounds.swift */,
+				520DDD4B23318A0F000C624B /* Button.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 				EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */,
 				3A611213233138F0001F31FE /* Sounds.swift in Sources */,
 				69072275232FC8CE00514145 /* Player.swift in Sources */,
+				520DDD4C23318A0F000C624B /* Button.swift in Sources */,
 				521560C6232FDC1600F2577B /* Timer.swift in Sources */,
 				EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */,
 				EAAC4ECD23300E5B00B53BE0 /* LaunchScreenViewController.swift in Sources */,
