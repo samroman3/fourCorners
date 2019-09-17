@@ -2,17 +2,28 @@ import Foundation
 
 struct Prompt {
     var prompt: String
-
+  static var usedPrompts = [String()]
     
     static let mvpPromptArray = [prompt1, prompt2, prompt3, prompt4, prompt5]
     static func randomPrompt() -> String {
 
-
-
-        return Prompt.mvpPromptArray.randomElement()?.prompt ?? "No prompt selected"
-    }
-    static func nextPrompt(round: Int) -> String {
-        return Prompt.mvpPromptArray[round].prompt
+        let newPrompt = Prompt.mvpPromptArray.randomElement()?.prompt
+        if !usedPrompts.contains(newPrompt!) {
+            usedPrompts.append(newPrompt!)
+            return newPrompt!
+        } else {
+            usedPrompts = [String()]
+           
+            let newNewPrompt = Prompt.mvpPromptArray.randomElement()?.prompt
+            usedPrompts.append(newNewPrompt!)
+            return newNewPrompt!
+            
+        }
+        
+//    static func nextPrompt(round: Int) -> String {
+//
+//        return Prompt.mvpPromptArray[round].prompt
+//    }
     }
 }
 
