@@ -42,7 +42,7 @@
                                 <rect key="frame" x="227" y="505" width="242" height="400"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOURCORNERS" translatesAutoresizingMaskIntoConstraints="NO" id="obE-lg-XqY">
-                                <rect key="frame" x="82" y="445" width="250" height="16"/>
+                                <rect key="frame" x="82" y="354.5" width="250" height="197.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="zn5-BL-3Kd"/>
                                 </constraints>
@@ -241,6 +241,18 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vaU-0r-wvf" userLabel="Player One Score Label">
+                                <rect key="frame" x="207" y="100" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AgB-8k-De4" userLabel="Player Two Score Label">
+                                <rect key="frame" x="207" y="796" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -248,14 +260,18 @@
                             <constraint firstItem="F2e-hU-IRa" firstAttribute="leading" secondItem="X14-EO-SA3" secondAttribute="leading" constant="20" id="7pr-AI-nch"/>
                             <constraint firstItem="vjB-FD-4Su" firstAttribute="leading" secondItem="eej-Jd-ymS" secondAttribute="leadingMargin" constant="-20" id="99l-bJ-udP"/>
                             <constraint firstItem="mqu-P6-HpH" firstAttribute="leading" secondItem="X14-EO-SA3" secondAttribute="leading" constant="-162" id="F3c-xV-tqe"/>
+                            <constraint firstItem="AgB-8k-De4" firstAttribute="centerY" secondItem="7u7-ox-HDU" secondAttribute="centerY" id="GrE-OW-wql"/>
                             <constraint firstItem="mqu-P6-HpH" firstAttribute="trailing" secondItem="X14-EO-SA3" secondAttribute="trailing" constant="162" id="H3k-US-ebV"/>
                             <constraint firstItem="vjB-FD-4Su" firstAttribute="top" secondItem="eej-Jd-ymS" secondAttribute="topMargin" constant="-44" id="H4L-lx-C9S"/>
+                            <constraint firstItem="AgB-8k-De4" firstAttribute="centerX" secondItem="7u7-ox-HDU" secondAttribute="centerX" id="J27-Nf-ttM"/>
                             <constraint firstItem="mqu-P6-HpH" firstAttribute="top" secondItem="eej-Jd-ymS" secondAttribute="top" constant="-220" id="KIY-WY-NXl"/>
                             <constraint firstAttribute="trailing" secondItem="OfW-01-Ayi" secondAttribute="trailing" id="LiL-ja-Dur"/>
                             <constraint firstItem="F2e-hU-IRa" firstAttribute="centerY" secondItem="X14-EO-SA3" secondAttribute="centerY" id="X2Y-91-P9l"/>
                             <constraint firstItem="OfW-01-Ayi" firstAttribute="leading" secondItem="eej-Jd-ymS" secondAttribute="leading" id="aR1-dc-S6m"/>
+                            <constraint firstItem="vaU-0r-wvf" firstAttribute="centerY" secondItem="vjB-FD-4Su" secondAttribute="centerY" id="b4Q-p0-70I"/>
                             <constraint firstAttribute="bottom" secondItem="OfW-01-Ayi" secondAttribute="bottom" constant="-214" id="cQp-DS-IYT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7u7-ox-HDU" secondAttribute="trailing" constant="-20" id="dgR-bI-cwb"/>
+                            <constraint firstItem="vaU-0r-wvf" firstAttribute="centerX" secondItem="vjB-FD-4Su" secondAttribute="centerX" id="e3g-ad-B7e"/>
                             <constraint firstItem="7u7-ox-HDU" firstAttribute="leading" secondItem="eej-Jd-ymS" secondAttribute="leadingMargin" constant="-20" id="hQm-Or-HFw"/>
                             <constraint firstItem="vjB-FD-4Su" firstAttribute="trailing" secondItem="eej-Jd-ymS" secondAttribute="trailingMargin" constant="20" id="pM3-Tv-HO2"/>
                             <constraint firstItem="F2e-hU-IRa" firstAttribute="centerX" secondItem="X14-EO-SA3" secondAttribute="centerX" id="pkv-SV-EFW"/>
@@ -309,7 +325,7 @@
                                     <action selector="buttonPress:" destination="eTN-ZF-Sxj" eventType="touchUpInside" id="sVw-fx-tdm"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfu-mr-jwM" userLabel="Bottom Left Button">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfu-mr-jwM" userLabel="Bottom Right Button">
                                 <rect key="frame" x="244" y="646" width="170" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="3Iu-za-y0O"/>
@@ -344,6 +360,18 @@
                                     <constraint firstAttribute="width" constant="295" id="seB-o7-Fef"/>
                                 </constraints>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MrY-Gm-33R" userLabel="Player One Score Label">
+                                <rect key="frame" x="329" y="125" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kq5-L8-6lU" userLabel="Player Two Score Label">
+                                <rect key="frame" x="85" y="453" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-WX-1Sa">
                                 <rect key="frame" x="190" y="369" width="209" height="168"/>
                                 <subviews>
@@ -386,6 +414,12 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnJ-J2-Gh1" userLabel="Score Label">
+                                <rect key="frame" x="329" y="771" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -398,12 +432,18 @@
                             <constraint firstItem="gdT-WX-1Sa" firstAttribute="leading" secondItem="ksw-SG-AQU" secondAttribute="trailing" constant="20" id="GJc-YN-kLK"/>
                             <constraint firstItem="zZh-o6-ILw" firstAttribute="top" secondItem="OMB-Vo-O6v" secondAttribute="top" id="H40-jP-n11"/>
                             <constraint firstItem="ksw-SG-AQU" firstAttribute="centerY" secondItem="7ef-9K-dyA" secondAttribute="centerY" id="NgB-RF-bKh"/>
+                            <constraint firstItem="MrY-Gm-33R" firstAttribute="centerY" secondItem="zZh-o6-ILw" secondAttribute="centerY" id="PXd-lc-otR"/>
                             <constraint firstItem="EnL-Un-LHk" firstAttribute="leading" secondItem="OMB-Vo-O6v" secondAttribute="leading" id="Pnz-71-T0z"/>
                             <constraint firstAttribute="trailing" secondItem="zZh-o6-ILw" secondAttribute="trailing" id="VMD-Vg-fI6"/>
                             <constraint firstAttribute="trailing" secondItem="Duk-Ab-oNE" secondAttribute="trailing" constant="-125" id="VhZ-F6-xcw"/>
+                            <constraint firstItem="fnJ-J2-Gh1" firstAttribute="centerY" secondItem="nfu-mr-jwM" secondAttribute="centerY" id="Wfl-Cg-SvM"/>
+                            <constraint firstItem="kq5-L8-6lU" firstAttribute="centerY" secondItem="EnL-Un-LHk" secondAttribute="centerY" id="dts-Oo-MuU"/>
                             <constraint firstItem="gdT-WX-1Sa" firstAttribute="centerY" secondItem="7ef-9K-dyA" secondAttribute="centerY" id="el9-7s-K2j"/>
                             <constraint firstAttribute="trailing" secondItem="nfu-mr-jwM" secondAttribute="trailing" id="fkC-0T-ef3"/>
                             <constraint firstItem="ksw-SG-AQU" firstAttribute="leading" secondItem="OMB-Vo-O6v" secondAttribute="leading" constant="-105" id="ns7-zw-Keg"/>
+                            <constraint firstItem="fnJ-J2-Gh1" firstAttribute="centerX" secondItem="nfu-mr-jwM" secondAttribute="centerX" id="ouA-L4-rGA"/>
+                            <constraint firstItem="kq5-L8-6lU" firstAttribute="centerX" secondItem="EnL-Un-LHk" secondAttribute="centerX" id="yBX-PW-1bE"/>
+                            <constraint firstItem="MrY-Gm-33R" firstAttribute="centerX" secondItem="zZh-o6-ILw" secondAttribute="centerX" id="z8w-LR-uEC"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7ef-9K-dyA"/>
                     </view>
@@ -557,23 +597,55 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKF-gN-W9X" userLabel="Player One Score Label">
+                                <rect key="frame" x="85" y="125" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSj-MQ-0zI" userLabel="Player Two Score Label">
+                                <rect key="frame" x="329" y="125" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBz-47-9t6" userLabel="Player Three Score Label">
+                                <rect key="frame" x="85" y="771" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-dy-c3A" userLabel="Player Four Score Label">
+                                <rect key="frame" x="329" y="771" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="vbt-Mm-57X" secondAttribute="bottom" constant="-46" id="4VW-TO-dUJ"/>
                             <constraint firstAttribute="trailing" secondItem="a1I-GI-wYn" secondAttribute="trailing" constant="-140" id="8Yx-x8-QJb"/>
                             <constraint firstItem="YhG-hw-cvq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-107" id="8il-63-Hy6"/>
+                            <constraint firstItem="TSj-MQ-0zI" firstAttribute="centerX" secondItem="Svh-WB-NDC" secondAttribute="centerX" id="Can-oh-dGj"/>
+                            <constraint firstItem="FBz-47-9t6" firstAttribute="centerY" secondItem="qZm-kd-x0X" secondAttribute="centerY" id="Dhp-0T-fxV"/>
                             <constraint firstItem="FFW-ng-P64" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ihp-Oc-mZz"/>
                             <constraint firstItem="FFW-ng-P64" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="Imz-n5-Vf3"/>
+                            <constraint firstItem="tKF-gN-W9X" firstAttribute="centerX" secondItem="FFW-ng-P64" secondAttribute="centerX" id="JEg-Kj-uEh"/>
+                            <constraint firstItem="TSj-MQ-0zI" firstAttribute="centerY" secondItem="Svh-WB-NDC" secondAttribute="centerY" id="NKI-KD-Mpl"/>
+                            <constraint firstItem="tKF-gN-W9X" firstAttribute="centerY" secondItem="FFW-ng-P64" secondAttribute="centerY" id="PM8-tT-3fh"/>
                             <constraint firstItem="YhG-hw-cvq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-25" id="QYA-Qb-QXu"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Svh-WB-NDC" secondAttribute="trailing" id="Rcu-LS-I0D"/>
+                            <constraint firstItem="Tjc-dy-c3A" firstAttribute="centerX" secondItem="uYI-Dj-XWX" secondAttribute="centerX" id="Smk-oH-8aB"/>
                             <constraint firstItem="qZm-kd-x0X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="TnZ-bw-lYT"/>
                             <constraint firstAttribute="bottom" secondItem="a1I-GI-wYn" secondAttribute="bottom" constant="-64" id="ViO-To-fwn"/>
                             <constraint firstItem="Svh-WB-NDC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="Vo7-V2-2Ue"/>
                             <constraint firstItem="ow7-9U-raU" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Xj2-O4-Xae"/>
+                            <constraint firstItem="FBz-47-9t6" firstAttribute="centerX" secondItem="qZm-kd-x0X" secondAttribute="centerX" id="dRW-Ge-VL5"/>
                             <constraint firstItem="vbt-Mm-57X" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="-122" id="eUV-As-ALB"/>
                             <constraint firstItem="HWL-Lh-eUG" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="eqO-YM-dbL"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uYI-Dj-XWX" secondAttribute="trailing" id="esX-EK-Rsz"/>
+                            <constraint firstItem="Tjc-dy-c3A" firstAttribute="centerY" secondItem="uYI-Dj-XWX" secondAttribute="centerY" id="hOM-VE-deV"/>
                             <constraint firstItem="HWL-Lh-eUG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="icF-87-cvl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="qZm-kd-x0X" secondAttribute="bottom" constant="-34" id="lLh-iz-iAh"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="uYI-Dj-XWX" secondAttribute="bottom" constant="-34" id="soR-Hr-YvV"/>
