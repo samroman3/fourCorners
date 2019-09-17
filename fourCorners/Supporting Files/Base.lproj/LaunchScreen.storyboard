@@ -18,12 +18,24 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Screen Shot 2019-09-16 at 2.43.23 PM" translatesAutoresizingMaskIntoConstraints="NO" id="Gu8-PT-b0e">
-                                <rect key="frame" x="-7" y="-62" width="429" height="1021"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topLeftBKGD" translatesAutoresizingMaskIntoConstraints="NO" id="7Vn-fv-d7v">
+                                <rect key="frame" x="-57" y="-53" width="233" height="460"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="topRightBKGD" translatesAutoresizingMaskIntoConstraints="NO" id="vwa-0L-WIC">
+                                <rect key="frame" x="209" y="-99" width="224" height="523"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottomLeftBKGD" translatesAutoresizingMaskIntoConstraints="NO" id="beD-f4-WMU">
+                                <rect key="frame" x="-26" y="560" width="237" height="383"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bottomRightBGKD" translatesAutoresizingMaskIntoConstraints="NO" id="xvT-kh-zRY">
+                                <rect key="frame" x="227" y="513" width="242" height="392"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -33,6 +45,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Screen Shot 2019-09-16 at 2.43.23 PM" width="750" height="1606"/>
+        <image name="bottomLeftBKGD" width="219" height="318"/>
+        <image name="bottomRightBGKD" width="194" height="332"/>
+        <image name="topLeftBKGD" width="186" height="324"/>
+        <image name="topRightBKGD" width="213" height="306"/>
     </resources>
 </document>
