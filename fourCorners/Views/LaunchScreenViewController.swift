@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class LaunchScreenViewController: UIViewController {
 
+    var sounds = AVAudioPlayer() {
+        didSet {
+            sounds.play()
+        }
+    }
     @IBOutlet weak var topLeftImage: UIImageView!
     @IBOutlet weak var topRightImage: UIImageView!
     @IBOutlet weak var bottomLeftImage: UIImageView!
@@ -17,8 +23,14 @@ class LaunchScreenViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    func setSounds(){
+        self.sounds = Sounds.setlaunchSound()
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        setSounds()
         configureImages()
         configureLabels()
         navigationController?.navigationBar.isHidden = true
