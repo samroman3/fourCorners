@@ -8,8 +8,10 @@
 
 import UIKit
 
-class SettingsViewController: UIViewController {
+class MenuViewController: UIViewController {
 
+    var menuSound = Sounds.setMenuSound()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true
@@ -17,7 +19,17 @@ class SettingsViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func twoPlayerButton(_ sender: UIButton) {
+    menuSound.play()
+    }
+    
+    @IBAction func threePlayerButton(_ sender: UIButton) {
+    menuSound.play()
+    }
+   
+    @IBAction func fourPlayerButton(_ sender: UIButton) {
+    menuSound.play()
+    }
     /*
     // MARK: - Navigation
 
