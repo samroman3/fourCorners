@@ -1,0 +1,30 @@
+//
+//  TwoPlayersViewController.swift
+//  fourCorners
+//
+//  Created by Sunni Tang on 9/16/19.
+//  Copyright © 2019 Sam Roman. All rights reserved.
+//
+
+import UIKit
+
+class TwoPlayersViewController: UIViewController {
+
+    
+    @IBOutlet weak var topButtonImage: UIImageView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+<<<<<<< HEAD
+        navigationController?.navigationBar.isHidden = true
+
+        // Do any additional setup after loading the view.
+=======
+        configureImages()
+>>>>>>> adds remaining objects to storyboard VCs and constaints
+    }
+    
+    private func configureImages() {
+        topButtonImage.image = UIImage(named: "playerOneButton" )
+    }
+}
