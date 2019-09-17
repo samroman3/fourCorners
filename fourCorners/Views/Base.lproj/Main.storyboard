@@ -42,7 +42,7 @@
                                 <rect key="frame" x="227" y="505" width="242" height="400"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOURCORNERS" translatesAutoresizingMaskIntoConstraints="NO" id="obE-lg-XqY">
-                                <rect key="frame" x="82" y="445" width="250" height="16"/>
+                                <rect key="frame" x="82" y="354.5" width="250" height="197.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="zn5-BL-3Kd"/>
                                 </constraints>
@@ -180,16 +180,16 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="playerOne" translatesAutoresizingMaskIntoConstraints="NO" id="mqu-P6-HpH">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playerOne" translatesAutoresizingMaskIntoConstraints="NO" id="mqu-P6-HpH">
                                 <rect key="frame" x="-162" y="-220" width="738" height="420"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Mc6-DE-G0T"/>
+                                    <constraint firstAttribute="height" constant="420" id="Mc6-DE-G0T"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="playerTwo" translatesAutoresizingMaskIntoConstraints="NO" id="OfW-01-Ayi" userLabel="Bottom Button Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playerTwo" translatesAutoresizingMaskIntoConstraints="NO" id="OfW-01-Ayi" userLabel="Bottom Button Image">
                                 <rect key="frame" x="0.0" y="696" width="414" height="414"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="Gnj-gd-XBi"/>
+                                    <constraint firstAttribute="height" constant="414" id="Gnj-gd-XBi"/>
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-hU-IRa">
@@ -241,14 +241,14 @@
                             <constraint firstItem="7u7-ox-HDU" firstAttribute="bottom" secondItem="eej-Jd-ymS" secondAttribute="bottomMargin" constant="34" id="1xd-tl-J5J"/>
                             <constraint firstItem="F2e-hU-IRa" firstAttribute="leading" secondItem="X14-EO-SA3" secondAttribute="leading" constant="20" id="7pr-AI-nch"/>
                             <constraint firstItem="vjB-FD-4Su" firstAttribute="leading" secondItem="eej-Jd-ymS" secondAttribute="leadingMargin" constant="-20" id="99l-bJ-udP"/>
-                            <constraint firstItem="mqu-P6-HpH" firstAttribute="leading" secondItem="X14-EO-SA3" secondAttribute="leading" id="F3c-xV-tqe"/>
-                            <constraint firstItem="mqu-P6-HpH" firstAttribute="trailing" secondItem="X14-EO-SA3" secondAttribute="trailing" id="H3k-US-ebV"/>
+                            <constraint firstItem="mqu-P6-HpH" firstAttribute="leading" secondItem="X14-EO-SA3" secondAttribute="leading" constant="-162" id="F3c-xV-tqe"/>
+                            <constraint firstItem="mqu-P6-HpH" firstAttribute="trailing" secondItem="X14-EO-SA3" secondAttribute="trailing" constant="162" id="H3k-US-ebV"/>
                             <constraint firstItem="vjB-FD-4Su" firstAttribute="top" secondItem="eej-Jd-ymS" secondAttribute="topMargin" constant="-44" id="H4L-lx-C9S"/>
-                            <constraint firstItem="mqu-P6-HpH" firstAttribute="top" secondItem="eej-Jd-ymS" secondAttribute="top" id="KIY-WY-NXl"/>
+                            <constraint firstItem="mqu-P6-HpH" firstAttribute="top" secondItem="eej-Jd-ymS" secondAttribute="top" constant="-220" id="KIY-WY-NXl"/>
                             <constraint firstAttribute="trailing" secondItem="OfW-01-Ayi" secondAttribute="trailing" id="LiL-ja-Dur"/>
                             <constraint firstItem="F2e-hU-IRa" firstAttribute="centerY" secondItem="X14-EO-SA3" secondAttribute="centerY" id="X2Y-91-P9l"/>
                             <constraint firstItem="OfW-01-Ayi" firstAttribute="leading" secondItem="eej-Jd-ymS" secondAttribute="leading" id="aR1-dc-S6m"/>
-                            <constraint firstAttribute="bottom" secondItem="OfW-01-Ayi" secondAttribute="bottom" id="cQp-DS-IYT"/>
+                            <constraint firstAttribute="bottom" secondItem="OfW-01-Ayi" secondAttribute="bottom" constant="-214" id="cQp-DS-IYT"/>
                             <constraint firstAttribute="trailingMargin" secondItem="7u7-ox-HDU" secondAttribute="trailing" constant="-20" id="dgR-bI-cwb"/>
                             <constraint firstItem="7u7-ox-HDU" firstAttribute="leading" secondItem="eej-Jd-ymS" secondAttribute="leadingMargin" constant="-20" id="hQm-Or-HFw"/>
                             <constraint firstItem="vjB-FD-4Su" firstAttribute="trailing" secondItem="eej-Jd-ymS" secondAttribute="trailingMargin" constant="20" id="pM3-Tv-HO2"/>
