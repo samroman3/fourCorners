@@ -21,8 +21,6 @@ class LaunchScreenViewController: UIViewController {
     @IBOutlet weak var bottomLeftImage: UIImageView!
     @IBOutlet weak var bottomRightImage: UIImageView!
     
-    @IBOutlet weak var nameLabel: UILabel!
-    
     func setSounds(){
         self.sounds = Sounds.setlaunchSound()
     }
