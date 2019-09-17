@@ -12,20 +12,59 @@ import UIKit
 
 
 struct Sounds {
-    
- var launchSound: AVAudioPlayer
 
-    mutating func setlaunchSound(){
+    static func setlaunchSound() -> AVAudioPlayer {
+    var sound = AVAudioPlayer()
     let path = Bundle.main.path(forResource: "LaunchSound.wav", ofType: nil)!
     let url = URL(fileURLWithPath: path)
     
     do {
         //create your audioPlayer in your parent class as a property
-        self.launchSound = try AVAudioPlayer(contentsOf: url)
+         sound = try AVAudioPlayer(contentsOf: url)
     } catch {
         print("couldn't load the file")
     }
-}
-    
+     return sound
+    }
+        static func setStartSound() -> AVAudioPlayer {
+            var sound = AVAudioPlayer()
+            let path = Bundle.main.path(forResource: "LaunchSound.wav", ofType: nil)!
+            let url = URL(fileURLWithPath: path)
+            
+            do {
+                //create your audioPlayer in your parent class as a property
+                sound = try AVAudioPlayer(contentsOf: url)
+            } catch {
+                print("couldn't load the file")
+            }
+            return sound
+    }
+            static func setEndGameSound() -> AVAudioPlayer {
+                var sound = AVAudioPlayer()
+                let path = Bundle.main.path(forResource: "synthTwo", ofType: nil)!
+                let url = URL(fileURLWithPath: path)
+                
+                do {
+                    //create your audioPlayer in your parent class as a property
+                    sound = try AVAudioPlayer(contentsOf: url)
+                } catch {
+                    print("couldn't load the file")
+                }
+                return sound
+    }
+//                static func setlaunchSound() -> AVAudioPlayer {
+//                    var sound = AVAudioPlayer()
+//                    let path = Bundle.main.path(forResource: "LaunchSound.wav", ofType: nil)!
+//                    let url = URL(fileURLWithPath: path)
+//                    
+//                    do {
+//                        //create your audioPlayer in your parent class as a property
+//                        sound = try AVAudioPlayer(contentsOf: url)
+//                    } catch {
+//                        print("couldn't load the file")
+//                    }
+//                    return sound
+//}
+   
 
 }
