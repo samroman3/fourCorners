@@ -14,7 +14,8 @@ class FourPlayersViewController: UIViewController {
     var pressSound = Sounds.setPressSound()
     var exitSound = Sounds.setEndGameSound()
     var startSound = Sounds.setStartSound()
-    
+    var timerSound = Sounds.setTimerSound()
+
     var winners: [Player]? {
         didSet {
             
@@ -57,6 +58,7 @@ class FourPlayersViewController: UIViewController {
     @IBAction func buttonPress(_ sender: UIButton){
         pressSound.play()
         //Switch to Increase score based on sender.tag of player button
+       disableAll()
         Player.increaseScore(player: sender.tag)
         startRoundButton.isHidden = false
         startRoundButton.isEnabled = true
@@ -73,14 +75,13 @@ class FourPlayersViewController: UIViewController {
     @IBAction func startRoundButton(_ sender: UIButton) {
         startSound.play()
         time = 4
-        enableAll()
+        
        promptLabel.isHidden = true
         exitButton.isHidden = true
         exitButton.isEnabled = false
         startRoundButton.isHidden = true
         startRoundButton.isEnabled = false
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
-        
     }
     
     @IBAction func exitButton(_ sender: UIButton) {
@@ -98,11 +99,12 @@ class FourPlayersViewController: UIViewController {
         time = 4
         startButton.isEnabled = false
         startButton.isHidden = true
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
     }
     
     @objc func timeAction() {
         promptLabel.isHidden = false
+       timerSound.play()
         time -= 1
         promptLabel.text = " \(time) "
         
