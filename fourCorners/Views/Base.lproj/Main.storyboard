@@ -603,7 +603,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSj-MQ-0zI" userLabel="Player Two Score Label">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSj-MQ-0zI" userLabel="Player Two Score Label">
                                 <rect key="frame" x="329" y="125" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -656,6 +656,10 @@
                     </view>
                     <connections>
                         <outlet property="exitButton" destination="zut-Ug-ZHs" id="k6D-FP-54y"/>
+                        <outlet property="playerFourScoreLabel" destination="Tjc-dy-c3A" id="rfk-rm-roN"/>
+                        <outlet property="playerOneScoreLabel" destination="tKF-gN-W9X" id="xgn-LD-8VH"/>
+                        <outlet property="playerThreeScoreLabel" destination="FBz-47-9t6" id="mB2-UF-pvw"/>
+                        <outlet property="playerTwoScoreLabel" destination="TSj-MQ-0zI" id="pni-Ph-NE3"/>
                         <outlet property="promptLabel" destination="n4n-2L-7up" id="nBJ-BG-QX8"/>
                         <outlet property="startButton" destination="POC-yC-rnR" id="4fw-NO-B0Y"/>
                         <outlet property="startRoundButton" destination="dq0-ir-xHq" id="vhm-na-A2P"/>

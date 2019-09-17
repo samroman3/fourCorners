@@ -48,6 +48,12 @@ class FourPlayersViewController: UIViewController {
      @IBOutlet weak var startRoundButton: UIButton!
     @IBOutlet weak var exitButton: UIButton!
     
+    @IBOutlet weak var playerOneScoreLabel: UILabel!
+    @IBOutlet weak var playerTwoScoreLabel: UILabel!
+    @IBOutlet weak var playerThreeScoreLabel: UILabel!
+    @IBOutlet weak var playerFourScoreLabel: UILabel!
+    
+    
     @IBAction func buttonPress(_ sender: UIButton){
         pressSound.play()
         //Switch to Increase score based on sender.tag of player button
@@ -59,6 +65,8 @@ class FourPlayersViewController: UIViewController {
         promptLabel.text = Player.roundEndLabel(player: sender.tag)
         promptLabel.isHidden = false
         winners = Player.winningCondition()
+        
+        updateScoreLabels(senderTag: sender.tag)
         
     }
     
@@ -82,6 +90,10 @@ class FourPlayersViewController: UIViewController {
     }
     
     @IBAction func startAction(_ sender: UIButton!) {
+        
+        Player.resetScore()
+        resetLabels()
+        exitButton.isHidden = true
         startSound.play()
         time = 4
         startButton.isEnabled = false
@@ -137,7 +149,6 @@ class FourPlayersViewController: UIViewController {
         self.startButton.isHidden = false
         self.startButton.isEnabled = true
         disableAll()
-        Player.resetScore()
         
         
     }
@@ -151,8 +162,28 @@ class FourPlayersViewController: UIViewController {
     }
     
     
+    private func updateScoreLabels(senderTag: Int) {
+        switch senderTag {
+        case 1:
+            playerOneScoreLabel.text = " \(Player.playerOne.score) "
+        case 2:
+            playerTwoScoreLabel.text = " \(Player.playerTwo.score) "
+        case 3:
+            playerThreeScoreLabel.text = " \(Player.playerThree.score) "
+        case 4:
+            playerFourScoreLabel.text = " \(Player.playerFour.score) "
+        default:
+            print("no button")
+        }
+    }
 
-
+    private func resetLabels() {
+        playerOneScoreLabel.text = ""
+        playerTwoScoreLabel.text = ""
+        playerThreeScoreLabel.text = ""
+        playerFourScoreLabel.text = ""
+        promptLabel.text = ""
+    }
 }
 
 
