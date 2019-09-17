@@ -42,7 +42,7 @@
                                 <rect key="frame" x="227" y="513" width="242" height="392"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOURCORNERS" translatesAutoresizingMaskIntoConstraints="NO" id="obE-lg-XqY">
-                                <rect key="frame" x="82" y="354.5" width="250" height="197.00000000000006"/>
+                                <rect key="frame" x="82" y="445" width="250" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="zn5-BL-3Kd"/>
                                 </constraints>
@@ -97,16 +97,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many players? " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v12-5D-DxK">
-                                <rect key="frame" x="106.5" y="250" width="201" height="25"/>
+                                <rect key="frame" x="93" y="235" width="228" height="29.5"/>
                                 <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xER-vF-MuW">
-                                <rect key="frame" x="87.5" y="345" width="239" height="216"/>
+                                <rect key="frame" x="79.5" y="334.5" width="255" height="237"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="v2w-z7-NDG">
-                                        <rect key="frame" x="0.0" y="0.0" width="239" height="52"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="255" height="59"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="40"/>
                                         <state key="normal" title="Two Players ">
                                             <color key="titleColor" red="1" green="0.2692915287618568" blue="0.1893893885535729" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
@@ -116,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-dB-Ujg">
-                                        <rect key="frame" x="0.0" y="82" width="239" height="52"/>
+                                        <rect key="frame" x="0.0" y="89" width="255" height="59"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="40"/>
                                         <state key="normal" title="Three Players ">
                                             <color key="titleColor" red="0.97066909069999996" green="0.8148091435" blue="0.37241569159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -126,7 +126,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-Pj-SJK">
-                                        <rect key="frame" x="0.0" y="164" width="239" height="52"/>
+                                        <rect key="frame" x="0.0" y="178" width="255" height="59"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="40"/>
                                         <state key="normal" title="Four Players ">
                                             <color key="titleColor" red="0.059087293280000001" green="0.52018559639999995" blue="0.1031346989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

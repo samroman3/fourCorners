@@ -52,7 +52,6 @@ class FourPlayersViewController: UIViewController {
         pressSound.play()
         //Switch to Increase score based on sender.tag of player button
         Player.increaseScore(player: sender.tag)
-        sender.setTitle("player One", for: .normal)
         startRoundButton.isHidden = false
         startRoundButton.isEnabled = true
         exitButton.isHidden = false
