@@ -36,6 +36,9 @@ class TwoPlayersViewController: UIViewController {
     var timer = Timer()
     var time = 0
 
+    @IBOutlet weak var playerOneScoreLabel: UILabel!
+    
+    @IBOutlet weak var playerTwoScoreLabel: UILabel!
     
     @IBOutlet weak var topButtonImage: UIImageView!
     @IBOutlet weak var bottomButtonImage: UIButton!
@@ -58,6 +61,7 @@ class TwoPlayersViewController: UIViewController {
         promptLabel.text = Player.roundEndLabel(player: sender.tag)
         promptLabel.isHidden = false
         winners = Player.winningCondition()
+        updateScoreLabels(senderTag: sender.tag)
         
     }
     
@@ -78,6 +82,9 @@ class TwoPlayersViewController: UIViewController {
     
     
     @IBAction func startGameButtonPressed(_ sender: Any) {
+        Player.resetScore()
+        resetLabels()
+        exitButton.isHidden = true
         startSound.play()
         time = 4
         startGameButton.isEnabled = false
@@ -89,9 +96,11 @@ class TwoPlayersViewController: UIViewController {
         promptLabel.isHidden = false
         time -= 1
         promptLabel.text = " \(time) "
+        disableAll()
         
         if time == 0 {
             timer.invalidate()
+            
             //startButton.isHidden = true
             // startButton.isEnabled = false
             gameStart()
@@ -137,7 +146,7 @@ class TwoPlayersViewController: UIViewController {
         self.startGameButton.isHidden = false
         self.startGameButton.isEnabled = true
         disableAll()
-        Player.resetScore()
+        
         
         
     }
@@ -151,6 +160,23 @@ class TwoPlayersViewController: UIViewController {
         playerButtonCollection.forEach({$0.isEnabled = true})
     }
     
+    private func updateScoreLabels(senderTag: Int) {
+        switch senderTag {
+        case 1:
+            playerOneScoreLabel.text = " \(Player.playerOne.score) "
+        case 2:
+            playerTwoScoreLabel.text = " \(Player.playerTwo.score) "
+        default:
+            print("no button")
+        }
+    }
+    
+    
+    private func resetLabels() {
+        playerOneScoreLabel.text = ""
+        playerTwoScoreLabel.text = ""
+        promptLabel.text = ""
+    }
     
     
     
