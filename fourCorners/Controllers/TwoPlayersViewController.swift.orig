@@ -15,8 +15,13 @@ class TwoPlayersViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         navigationController?.navigationBar.isHidden = true
+
+        // Do any additional setup after loading the view.
+=======
         configureImages()
+>>>>>>> adds remaining objects to storyboard VCs and constaints
     }
     
     private func configureImages() {
