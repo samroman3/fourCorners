@@ -10,6 +10,30 @@ import UIKit
 
 class ThreePlayersViewController: UIViewController {
 
+    @IBOutlet weak var topRightButtonImage: UIImageView!
+    @IBOutlet weak var bottomRightButtonImage: UIButton!
+    @IBOutlet weak var middleButtonImage: UIImageView!
+    @IBOutlet weak var startGameButton: UIButton!
+    
+    @IBOutlet weak var startRoundButton: UIButton!
+    @IBOutlet weak var promptLabel: UILabel!
+    @IBOutlet weak var exitButton: UIButton!
+    
+    
+    @IBAction func startGameButtonPressed(_ sender: Any) {
+    }
+    
+    
+    @IBAction func startRoundButtonPressed(_ sender: Any) {
+    }
+    
+    
+    @IBAction func exitGameButtonPressed(_ sender: Any) {
+    }
+    
+    
+    @IBOutlet var playerButtonCollection: [UIButton]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.isHidden = true

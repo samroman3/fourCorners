@@ -17,6 +17,11 @@
 		3A61120D233122F9001F31FE /* SignPainter HouseScript Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A61120C2331212E001F31FE /* SignPainter HouseScript Regular.ttf */; };
 		3A61120F23312432001F31FE /* SignPainter HouseSlant Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A61120E2331241B001F31FE /* SignPainter HouseSlant Regular.ttf */; };
 		3A61121123312513001F31FE /* SignPainter HouseBrush Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3A611210233124C3001F31FE /* SignPainter HouseBrush Regular.ttf */; };
+		3A611213233138F0001F31FE /* Sounds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A611212233138F0001F31FE /* Sounds.swift */; };
+		3A61121623313F33001F31FE /* LaunchSound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A61121523313F33001F31FE /* LaunchSound.wav */; };
+		3A61121823313F37001F31FE /* synthOne.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A61121723313F37001F31FE /* synthOne.wav */; };
+		3A61121A23313F3D001F31FE /* synthThree.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A61121923313F3D001F31FE /* synthThree.wav */; };
+		3A61121C23313F42001F31FE /* synthTwo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A61121B23313F42001F31FE /* synthTwo.wav */; };
 		521560C6232FDC1600F2577B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521560C5232FDC1600F2577B /* Timer.swift */; };
 		69072275232FC8CE00514145 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69072274232FC8CE00514145 /* Player.swift */; };
 		EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */; };
@@ -63,6 +68,11 @@
 		3A61120C2331212E001F31FE /* SignPainter HouseScript Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SignPainter HouseScript Regular.ttf"; sourceTree = "<group>"; };
 		3A61120E2331241B001F31FE /* SignPainter HouseSlant Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SignPainter HouseSlant Regular.ttf"; sourceTree = "<group>"; };
 		3A611210233124C3001F31FE /* SignPainter HouseBrush Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SignPainter HouseBrush Regular.ttf"; sourceTree = "<group>"; };
+		3A611212233138F0001F31FE /* Sounds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sounds.swift; sourceTree = "<group>"; };
+		3A61121523313F33001F31FE /* LaunchSound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = LaunchSound.wav; sourceTree = "<group>"; };
+		3A61121723313F37001F31FE /* synthOne.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = synthOne.wav; sourceTree = "<group>"; };
+		3A61121923313F3D001F31FE /* synthThree.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = synthThree.wav; sourceTree = "<group>"; };
+		3A61121B23313F42001F31FE /* synthTwo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = synthTwo.wav; sourceTree = "<group>"; };
 		521560C5232FDC1600F2577B /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		69072274232FC8CE00514145 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyFile.swift; sourceTree = "<group>"; };
@@ -159,6 +169,17 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		3A61121423313939001F31FE /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				3A61121523313F33001F31FE /* LaunchSound.wav */,
+				3A61121723313F37001F31FE /* synthOne.wav */,
+				3A61121923313F3D001F31FE /* synthThree.wav */,
+				3A61121B23313F42001F31FE /* synthTwo.wav */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		EAAC4EBF232C29DB00B53BE0 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +198,7 @@
 				EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */,
 				69072274232FC8CE00514145 /* Player.swift */,
 				521560C5232FDC1600F2577B /* Timer.swift */,
+				3A611212233138F0001F31FE /* Sounds.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -192,6 +214,7 @@
 		EAAC4EC2232C2A0800B53BE0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3A61121423313939001F31FE /* Sounds */,
 				3A61120B23312103001F31FE /* Fonts */,
 				3A6111D9232C2214001F31FE /* AppDelegate.swift */,
 				3A6111E2232C2217001F31FE /* LaunchScreen.storyboard */,
@@ -312,11 +335,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A61121823313F37001F31FE /* synthOne.wav in Resources */,
 				3A61121123312513001F31FE /* SignPainter HouseBrush Regular.ttf in Resources */,
 				3A6111E4232C2217001F31FE /* LaunchScreen.storyboard in Resources */,
 				3A6111E1232C2217001F31FE /* Assets.xcassets in Resources */,
+				3A61121623313F33001F31FE /* LaunchSound.wav in Resources */,
 				3A61120D233122F9001F31FE /* SignPainter HouseScript Regular.ttf in Resources */,
+				3A61121A23313F3D001F31FE /* synthThree.wav in Resources */,
 				3A6111DF232C2214001F31FE /* Main.storyboard in Resources */,
+				3A61121C23313F42001F31FE /* synthTwo.wav in Resources */,
 				3A61120F23312432001F31FE /* SignPainter HouseSlant Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -347,6 +374,7 @@
 				EAAC4ED3233010A100B53BE0 /* ThreePlayersViewController.swift in Sources */,
 				EAAC4ED123300F9F00B53BE0 /* TwoPlayersViewController.swift in Sources */,
 				EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */,
+				3A611213233138F0001F31FE /* Sounds.swift in Sources */,
 				69072275232FC8CE00514145 /* Player.swift in Sources */,
 				521560C6232FDC1600F2577B /* Timer.swift in Sources */,
 				EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */,
