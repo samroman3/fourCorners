@@ -12,32 +12,16 @@ class TwoPlayersViewController: UIViewController {
 
     
     @IBOutlet weak var topButtonImage: UIImageView!
-    @IBOutlet weak var bottomButtonImage: UIButton!
-    @IBOutlet weak var startGameButton: UIButton!
-    
-    @IBOutlet weak var startRoundButton: UIButton!
-    @IBOutlet weak var promptLabel: UILabel!
-    @IBOutlet weak var exitButton: UIButton!
-    
-    
-    @IBAction func startGameButtonPressed(_ sender: Any) {
-    }
-    
-    
-    @IBAction func startRoundButtonPressed(_ sender: Any) {
-    }
-    
-    
-    @IBAction func exitGameButtonPressed(_ sender: Any) {
-    }
-    
-    
-    @IBOutlet var playerButtonCollection: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+<<<<<<< HEAD
         navigationController?.navigationBar.isHidden = true
+
+        // Do any additional setup after loading the view.
+=======
         configureImages()
+>>>>>>> adds remaining objects to storyboard VCs and constaints
     }
     
     private func configureImages() {
