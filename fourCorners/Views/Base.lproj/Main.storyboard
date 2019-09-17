@@ -147,7 +147,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjB-FD-4Su" userLabel="Top Button">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjB-FD-4Su" userLabel="Top Button">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="nvD-NY-iJi"/>
@@ -165,7 +165,7 @@
                                     <constraint firstAttribute="height" constant="200" id="Gnj-gd-XBi"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-ox-HDU" userLabel="Bottom Button">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7u7-ox-HDU" userLabel="Bottom Button">
                                 <rect key="frame" x="0.0" y="696" width="414" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="dM9-gN-cgt"/>
@@ -182,6 +182,7 @@
                                         <state key="normal" title="startGame"/>
                                         <connections>
                                             <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L1q-uS-Q4W"/>
+                                            <action selector="startGameButtonPressed:" destination="AW2-pI-hdR" eventType="touchUpInside" id="a8g-NA-0nh"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO2-Fq-OT2">
@@ -189,6 +190,7 @@
                                         <state key="normal" title="startRound"/>
                                         <connections>
                                             <action selector="startRoundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ytj-d4-CQB"/>
+                                            <action selector="startRoundButtonPressed:" destination="AW2-pI-hdR" eventType="touchUpInside" id="yTk-ep-Wwh"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="promptLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-KX-LnV">
@@ -200,6 +202,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNJ-MC-6Ml" userLabel="Exit Button">
                                         <rect key="frame" x="0.0" y="100.5" width="97.5" height="30"/>
                                         <state key="normal" title="exitButton"/>
+                                        <connections>
+                                            <action selector="exitGameButtonPressed:" destination="AW2-pI-hdR" eventType="touchUpInside" id="hlg-OS-SAF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -224,7 +229,14 @@
                         <viewLayoutGuide key="safeArea" id="X14-EO-SA3"/>
                     </view>
                     <connections>
+                        <outlet property="bottomButtonImage" destination="7u7-ox-HDU" id="Tbh-y3-hQr"/>
+                        <outlet property="exitButton" destination="HNJ-MC-6Ml" id="feb-3N-sRM"/>
+                        <outlet property="promptLabel" destination="gbx-KX-LnV" id="zcL-NT-MPM"/>
+                        <outlet property="startGameButton" destination="Rbn-rY-40v" id="HrR-PK-KN0"/>
+                        <outlet property="startRoundButton" destination="TO2-Fq-OT2" id="Yyr-zk-IPB"/>
                         <outlet property="topButtonImage" destination="mqu-P6-HpH" id="VmA-rI-qiU"/>
+                        <outletCollection property="playerButtonCollection" destination="vjB-FD-4Su" collectionClass="NSMutableArray" id="CUp-W1-1b5"/>
+                        <outletCollection property="playerButtonCollection" destination="7u7-ox-HDU" collectionClass="NSMutableArray" id="56u-5O-AyA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vLI-Sa-IiG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -246,35 +258,35 @@
                                     <constraint firstAttribute="width" constant="170" id="XHV-H6-QOk"/>
                                 </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZh-o6-ILw" userLabel="Top Right Button">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zZh-o6-ILw" userLabel="Top Right Button">
                                 <rect key="frame" x="244" y="0.0" width="170" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="YeI-ci-xz3"/>
                                     <constraint firstAttribute="width" constant="170" id="gyQ-yx-vne"/>
                                 </constraints>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfu-mr-jwM" userLabel="Bottom Left Button">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfu-mr-jwM" userLabel="Bottom Left Button">
                                 <rect key="frame" x="244" y="646" width="170" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="3Iu-za-y0O"/>
                                     <constraint firstAttribute="height" constant="250" id="Imm-8S-NLj"/>
                                 </constraints>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q00-gq-I2d" userLabel="Top Right Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="q00-gq-I2d" userLabel="Top Right Image">
                                 <rect key="frame" x="244" y="0.0" width="170" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="HVf-QZ-UTs"/>
                                     <constraint firstAttribute="height" constant="250" id="OPz-zj-zS7"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksw-SG-AQU" userLabel="Middle Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ksw-SG-AQU" userLabel="Middle Image">
                                 <rect key="frame" x="0.0" y="328" width="170" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="DV8-mw-7n2"/>
                                     <constraint firstAttribute="height" constant="250" id="Uvf-fF-xJF"/>
                                 </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Duk-Ab-oNE" userLabel="Bottom Right Image">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Duk-Ab-oNE" userLabel="Bottom Right Image">
                                 <rect key="frame" x="244" y="646" width="170" height="250"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="DFc-Xl-Iq5"/>
@@ -292,13 +304,14 @@
                                         <state key="normal" title="startGame"/>
                                         <connections>
                                             <action selector="startAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qfZ-WK-pLo"/>
+                                            <action selector="startGameButtonPressed:" destination="eTN-ZF-Sxj" eventType="touchUpInside" id="8mv-ac-nVe"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aNx-Hf-w4D">
                                         <rect key="frame" x="0.0" y="50" width="97.5" height="30"/>
                                         <state key="normal" title="startRound"/>
                                         <connections>
-                                            <action selector="startRoundButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vik-rE-ki7"/>
+                                            <action selector="startRoundButtonPressed:" destination="eTN-ZF-Sxj" eventType="touchUpInside" id="xoD-WS-lM6"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="promptLabel" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T2F-26-isX">
@@ -310,6 +323,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SVb-HR-ckz" userLabel="Exit Button">
                                         <rect key="frame" x="0.0" y="100.5" width="97.5" height="30"/>
                                         <state key="normal" title="exitButton"/>
+                                        <connections>
+                                            <action selector="exitGameButtonPressed:" destination="eTN-ZF-Sxj" eventType="touchUpInside" id="UQh-xE-WEh"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -333,6 +349,18 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="7ef-9K-dyA"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomRightButtonImage" destination="nfu-mr-jwM" id="5HA-f5-BbO"/>
+                        <outlet property="exitButton" destination="SVb-HR-ckz" id="3yu-Y8-j5d"/>
+                        <outlet property="middleButtonImage" destination="ksw-SG-AQU" id="PiD-5K-WHB"/>
+                        <outlet property="promptLabel" destination="T2F-26-isX" id="hR0-33-iVM"/>
+                        <outlet property="startGameButton" destination="T6n-GU-gzc" id="A2D-fz-xp9"/>
+                        <outlet property="startRoundButton" destination="aNx-Hf-w4D" id="p8n-Fb-ffi"/>
+                        <outlet property="topRightButtonImage" destination="q00-gq-I2d" id="CvX-3m-VOB"/>
+                        <outletCollection property="playerButtonCollection" destination="nfu-mr-jwM" collectionClass="NSMutableArray" id="SPU-vw-fFg"/>
+                        <outletCollection property="playerButtonCollection" destination="EnL-Un-LHk" collectionClass="NSMutableArray" id="Rkg-6O-wbd"/>
+                        <outletCollection property="playerButtonCollection" destination="zZh-o6-ILw" collectionClass="NSMutableArray" id="QWh-n1-Nbn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ef7-1A-2o7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
