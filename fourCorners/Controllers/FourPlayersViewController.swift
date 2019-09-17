@@ -20,6 +20,8 @@ class FourPlayersViewController: UIViewController {
                 promptLabel.text = Player.winningLabel()
                 startRoundButton.isHidden = true
                 startRoundButton.isEnabled = false
+                exitButton.isHidden = false
+                exitButton.isEnabled = true
                 self.time = 4
                 gameOver()
             }
@@ -28,20 +30,22 @@ class FourPlayersViewController: UIViewController {
     }
     
     var timer = Timer()
-    var time = 4
+    var time = 0
     
 
     //MARK: Outlet Collection
     
     @IBOutlet var collection: [UIButton]!
      @IBOutlet weak var startRoundButton: UIButton!
-
+    @IBOutlet weak var exitButton: UIButton!
+    
     @IBAction func buttonPress(_ sender: UIButton){
         //Switch to Increase score based on sender.tag of player button
         Player.increaseScore(player: sender.tag)
         startRoundButton.isHidden = false
         startRoundButton.isEnabled = true
-        
+        exitButton.isHidden = false
+        exitButton.isEnabled = true
         promptLabel.text = Player.roundEndLabel(player: sender.tag)
         promptLabel.isHidden = false
         winners = Player.winningCondition()
@@ -49,12 +53,21 @@ class FourPlayersViewController: UIViewController {
     }
     
     @IBAction func startRoundButton(_ sender: UIButton) {
+        time = 4
         enableAll()
-        promptLabel.text = Player.winningLabel()
+       promptLabel.isHidden = true
+        exitButton.isHidden = true
+        exitButton.isEnabled = false
         startRoundButton.isHidden = true
         startRoundButton.isEnabled = false
+        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
         
     }
+    
+    @IBAction func exitButton(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
+    
     
     
     
@@ -63,6 +76,9 @@ class FourPlayersViewController: UIViewController {
     @IBOutlet weak var startButton: UIButton!
     
     @IBAction func startAction(_ sender: UIButton!) {
+     time = 4
+        startButton.isEnabled = false
+        startButton.isHidden = true
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
     }
     
@@ -73,13 +89,17 @@ class FourPlayersViewController: UIViewController {
         
         if time == 0 {
             timer.invalidate()
+            //startButton.isHidden = true
+           // startButton.isEnabled = false
             gameStart()
+
+            
         }
     }
     
     func gameStart(){
-        self.startButton.isEnabled = false
-        self.startButton.isHidden = true
+//        self.startButton.isEnabled = false
+//        self.startButton.isHidden = true
         startRoundButton.isHidden = true
         startRoundButton.isEnabled = false
         promptLabel.isHidden = false
@@ -107,10 +127,14 @@ class FourPlayersViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        navigationController?.navigationBar.isHidden = true
         disableAll()
         promptLabel.isHidden = true
         startRoundButton.isHidden = true
-        super.viewDidLoad()
+        exitButton.isHidden = true
+        exitButton.isEnabled = false
         // Do any additional setup after loading the view.
     }
 
