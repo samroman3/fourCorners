@@ -152,7 +152,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="nvD-NY-iJi"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mqu-P6-HpH">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="200"/>
@@ -171,7 +170,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="dM9-gN-cgt"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-hU-IRa">
                                 <rect key="frame" x="158.5" y="388" width="97.5" height="130.5"/>
