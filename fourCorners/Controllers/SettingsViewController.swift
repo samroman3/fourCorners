@@ -29,6 +29,7 @@ class MenuViewController: UIViewController {
    
     @IBAction func fourPlayerButton(_ sender: UIButton) {
     menuSound.play()
+        
     }
     /*
     // MARK: - Navigation
