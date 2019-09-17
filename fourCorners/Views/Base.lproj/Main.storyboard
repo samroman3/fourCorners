@@ -281,6 +281,8 @@
                     <connections>
                         <outlet property="bottomButtonImage" destination="7u7-ox-HDU" id="Tbh-y3-hQr"/>
                         <outlet property="exitButton" destination="HNJ-MC-6Ml" id="feb-3N-sRM"/>
+                        <outlet property="playerOneScoreLabel" destination="vaU-0r-wvf" id="noR-XP-jiR"/>
+                        <outlet property="playerTwoScoreLabel" destination="AgB-8k-De4" id="v8I-1G-MRm"/>
                         <outlet property="promptLabel" destination="gbx-KX-LnV" id="zcL-NT-MPM"/>
                         <outlet property="startGameButton" destination="Rbn-rY-40v" id="HrR-PK-KN0"/>
                         <outlet property="startRoundButton" destination="TO2-Fq-OT2" id="Yyr-zk-IPB"/>
@@ -372,6 +374,12 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnJ-J2-Gh1" userLabel="Player Three Score Label">
+                                <rect key="frame" x="329" y="771" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gdT-WX-1Sa">
                                 <rect key="frame" x="190" y="369" width="209" height="168"/>
                                 <subviews>
@@ -414,12 +422,6 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnJ-J2-Gh1" userLabel="Score Label">
-                                <rect key="frame" x="329" y="771" width="0.0" height="0.0"/>
-                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -451,6 +453,9 @@
                         <outlet property="bottomRightButtonImage" destination="nfu-mr-jwM" id="5HA-f5-BbO"/>
                         <outlet property="exitButton" destination="SVb-HR-ckz" id="3yu-Y8-j5d"/>
                         <outlet property="middleButtonImage" destination="ksw-SG-AQU" id="PiD-5K-WHB"/>
+                        <outlet property="playerOneScoreLabel" destination="MrY-Gm-33R" id="XFA-ns-Y0q"/>
+                        <outlet property="playerThreeScoreLabel" destination="fnJ-J2-Gh1" id="enA-tr-MhW"/>
+                        <outlet property="playerTwoScoreLabel" destination="kq5-L8-6lU" id="8ry-jB-yNg"/>
                         <outlet property="promptLabel" destination="T2F-26-isX" id="hR0-33-iVM"/>
                         <outlet property="startGameButton" destination="T6n-GU-gzc" id="A2D-fz-xp9"/>
                         <outlet property="startRoundButton" destination="aNx-Hf-w4D" id="p8n-Fb-ffi"/>
