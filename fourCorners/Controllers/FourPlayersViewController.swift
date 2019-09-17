@@ -7,8 +7,13 @@
 //
 
 import UIKit
+import AVFoundation
 
 class FourPlayersViewController: UIViewController {
+    
+    var pressSound = Sounds.setPressSound()
+    var exitSound = Sounds.setEndGameSound()
+    var startSound = Sounds.setStartSound()
     
     var winners: [Player]? {
         didSet {
@@ -44,6 +49,7 @@ class FourPlayersViewController: UIViewController {
     @IBOutlet weak var exitButton: UIButton!
     
     @IBAction func buttonPress(_ sender: UIButton){
+        pressSound.play()
         //Switch to Increase score based on sender.tag of player button
         Player.increaseScore(player: sender.tag)
         sender.setTitle("player One", for: .normal)
@@ -58,6 +64,7 @@ class FourPlayersViewController: UIViewController {
     }
     
     @IBAction func startRoundButton(_ sender: UIButton) {
+        startSound.play()
         time = 4
         enableAll()
        promptLabel.isHidden = true
@@ -70,10 +77,13 @@ class FourPlayersViewController: UIViewController {
     }
     
     @IBAction func exitButton(_ sender: UIButton) {
+        exitSound.play()
+        sleep(1)
         navigationController?.popToRootViewController(animated: false)
     }
     
     @IBAction func startAction(_ sender: UIButton!) {
+        startSound.play()
         time = 4
         startButton.isEnabled = false
         startButton.isHidden = true
@@ -83,7 +93,7 @@ class FourPlayersViewController: UIViewController {
     @objc func timeAction() {
         promptLabel.isHidden = false
         time -= 1
-        promptLabel.text = String(time)
+        promptLabel.text = " \(time) "
         
         if time == 0 {
             timer.invalidate()
