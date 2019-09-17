@@ -11,6 +11,9 @@ struct Prompt {
 
         return Prompt.mvpPromptArray.randomElement()?.prompt ?? "No prompt selected"
     }
+    static func nextPrompt(round: Int) -> String {
+        return Prompt.mvpPromptArray[round].prompt
+    }
 }
 
 

@@ -302,6 +302,9 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zut-Ug-ZHs">
                                 <rect key="frame" x="172" y="553.5" width="70" height="30"/>
                                 <state key="normal" title="exitButton"/>
+                                <connections>
+                                    <action selector="exitButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vEi-MM-5Ab"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
@@ -329,6 +332,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="exitButton" destination="zut-Ug-ZHs" id="M54-Yi-rDa"/>
                         <outlet property="promptLabel" destination="n4n-2L-7up" id="nBJ-BG-QX8"/>
                         <outlet property="startButton" destination="POC-yC-rnR" id="4fw-NO-B0Y"/>
                         <outlet property="startRoundButton" destination="dq0-ir-xHq" id="vhm-na-A2P"/>

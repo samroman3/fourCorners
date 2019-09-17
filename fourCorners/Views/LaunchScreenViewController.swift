@@ -21,6 +21,7 @@ class LaunchScreenViewController: UIViewController {
         super.viewDidLoad()
         configureImages()
         configureLabels()
+        navigationController?.navigationBar.isHidden = true
     }
     
     private func configureImages() {
