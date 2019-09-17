@@ -7,9 +7,15 @@
 //
 
 import UIKit
+import AVFoundation
 
 class LaunchScreenViewController: UIViewController {
 
+    var sounds = AVAudioPlayer() {
+        didSet {
+            sounds.play()
+        }
+    }
     @IBOutlet weak var topLeftImage: UIImageView!
     @IBOutlet weak var topRightImage: UIImageView!
     @IBOutlet weak var bottomLeftImage: UIImageView!
@@ -17,22 +23,18 @@ class LaunchScreenViewController: UIViewController {
     
     @IBOutlet weak var nameLabel: UILabel!
     
+    func setSounds(){
+        self.sounds = Sounds.setlaunchSound()
+    }
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        configureImages()
-        configureLabels()
+        setSounds()
         navigationController?.navigationBar.isHidden = true
     }
     
-    private func configureImages() {
-        topLeftImage.image = UIImage(named: "topLeftBKGD")
-        topRightImage.image = UIImage(named: "topRightBKGD")
-        bottomLeftImage.image = UIImage(named: "bottomLeftBKGD")
-        bottomRightImage.image = UIImage(named: "bottomRightBGKD")
-    }
+
     
-    private func configureLabels() {
-        nameLabel.text = "Four Corners"
-    }
 
 }
