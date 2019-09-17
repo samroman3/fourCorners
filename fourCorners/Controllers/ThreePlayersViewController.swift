@@ -40,7 +40,14 @@ class ThreePlayersViewController: UIViewController {
     
     
     
-
+    
+    @IBOutlet weak var playerOneScoreLabel: UILabel!
+    
+    @IBOutlet weak var playerTwoScoreLabel: UILabel!
+    
+    
+    @IBOutlet weak var playerThreeScoreLabel: UILabel!
+    
     @IBOutlet weak var topRightButtonImage: UIImageView!
     @IBOutlet weak var bottomRightButtonImage: UIButton!
     @IBOutlet weak var middleButtonImage: UIImageView!
@@ -63,6 +70,7 @@ class ThreePlayersViewController: UIViewController {
         promptLabel.text = Player.roundEndLabel(player: sender.tag)
         promptLabel.isHidden = false
         winners = Player.winningCondition()
+        updateScoreLabels(senderTag: sender.tag)
         
     }
     
@@ -84,6 +92,9 @@ class ThreePlayersViewController: UIViewController {
     
     
     @IBAction func startGameButtonPressed(_ sender: Any) {
+        Player.resetScore()
+        resetLabels()
+        exitButton.isHidden = true
         startSound.play()
         time = 4
         startGameButton.isEnabled = false
@@ -152,7 +163,7 @@ class ThreePlayersViewController: UIViewController {
         self.startGameButton.isHidden = false
         self.startGameButton.isEnabled = true
         disableAll()
-        Player.resetScore()
+        
         
         
     }
@@ -167,5 +178,28 @@ class ThreePlayersViewController: UIViewController {
     }
     
     
+    private func updateScoreLabels(senderTag: Int) {
+        switch senderTag {
+        case 1:
+            playerOneScoreLabel.text = " \(Player.playerOne.score) "
+        case 2:
+            playerTwoScoreLabel.text = " \(Player.playerTwo.score) "
+        case 3:
+            playerThreeScoreLabel.text = " \(Player.playerThree.score) "
+        default:
+            print("no button")
+        }
+    }
+    
+    private func resetLabels() {
+        playerOneScoreLabel.text = ""
+        playerTwoScoreLabel.text = ""
+        playerThreeScoreLabel.text = ""
+        promptLabel.text = ""
+    }
+    
 
 }
+
+
+//
