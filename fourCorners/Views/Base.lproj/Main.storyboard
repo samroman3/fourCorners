@@ -23,12 +23,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nameLabel" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mbp-Me-Oik">
-                                <rect key="frame" x="104.5" y="428" width="205.5" height="50"/>
-                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="50"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gud-fl-zaf">
                                 <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <connections>
@@ -36,7 +30,7 @@
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topLeftBKGD" translatesAutoresizingMaskIntoConstraints="NO" id="LYO-qa-a4E">
-                                <rect key="frame" x="-57" y="-27" width="240" height="447"/>
+                                <rect key="frame" x="-57" y="-27" width="240" height="417"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="topRightBKGD" translatesAutoresizingMaskIntoConstraints="NO" id="DFI-iO-eut">
                                 <rect key="frame" x="209" y="-113" width="225" height="520"/>
@@ -45,19 +39,26 @@
                                 <rect key="frame" x="-26" y="553" width="245" height="389"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bottomRightBGKD" translatesAutoresizingMaskIntoConstraints="NO" id="xd8-cI-IbZ">
-                                <rect key="frame" x="227" y="476" width="242" height="429"/>
+                                <rect key="frame" x="227" y="505" width="242" height="400"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOURCORNERS" translatesAutoresizingMaskIntoConstraints="NO" id="obE-lg-XqY">
+                                <rect key="frame" x="82" y="354.5" width="250" height="197.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="zn5-BL-3Kd"/>
+                                </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="xd8-cI-IbZ" firstAttribute="top" secondItem="n8l-4e-e6o" secondAttribute="centerY" constant="23" id="5Zy-E7-78a"/>
+                            <constraint firstItem="xd8-cI-IbZ" firstAttribute="top" secondItem="n8l-4e-e6o" secondAttribute="centerY" constant="52" id="5Zy-E7-78a"/>
                             <constraint firstAttribute="bottom" secondItem="xd8-cI-IbZ" secondAttribute="bottom" constant="-9" id="6Wt-8c-Le8"/>
                             <constraint firstItem="DFI-iO-eut" firstAttribute="leading" secondItem="n8l-4e-e6o" secondAttribute="centerX" constant="2" id="EWc-hc-EwH"/>
-                            <constraint firstItem="LYO-qa-a4E" firstAttribute="bottom" secondItem="n8l-4e-e6o" secondAttribute="centerY" constant="-33" id="FjN-AF-Pah"/>
+                            <constraint firstItem="LYO-qa-a4E" firstAttribute="bottom" secondItem="n8l-4e-e6o" secondAttribute="centerY" constant="-63" id="FjN-AF-Pah"/>
                             <constraint firstAttribute="bottom" secondItem="MOi-ef-jK6" secondAttribute="bottom" constant="-46" id="FkJ-cF-5Hf"/>
                             <constraint firstItem="LYO-qa-a4E" firstAttribute="leading" secondItem="o1h-je-saI" secondAttribute="leading" constant="-57" id="HJB-zT-ULT"/>
+                            <constraint firstItem="obE-lg-XqY" firstAttribute="centerX" secondItem="Gud-fl-zaf" secondAttribute="centerX" id="Hna-ea-Izd"/>
                             <constraint firstItem="xd8-cI-IbZ" firstAttribute="leading" secondItem="n8l-4e-e6o" secondAttribute="centerX" constant="20" id="KQh-wT-Fp0"/>
-                            <constraint firstItem="Mbp-Me-Oik" firstAttribute="centerX" secondItem="n8l-4e-e6o" secondAttribute="centerX" id="NR2-KE-C3q"/>
+                            <constraint firstItem="obE-lg-XqY" firstAttribute="centerY" secondItem="Gud-fl-zaf" secondAttribute="centerY" id="Qz5-Ad-gLp"/>
                             <constraint firstItem="LYO-qa-a4E" firstAttribute="trailing" secondItem="n8l-4e-e6o" secondAttribute="centerX" constant="-24" id="RpR-kC-egR"/>
                             <constraint firstItem="Gud-fl-zaf" firstAttribute="top" secondItem="n8l-4e-e6o" secondAttribute="top" id="SHl-4b-SOJ"/>
                             <constraint firstAttribute="trailing" secondItem="DFI-iO-eut" secondAttribute="trailing" constant="-20" id="Sdt-3Y-8bH"/>
@@ -71,7 +72,6 @@
                             <constraint firstItem="MOi-ef-jK6" firstAttribute="trailing" secondItem="n8l-4e-e6o" secondAttribute="centerX" constant="12" id="s5i-UB-JA7"/>
                             <constraint firstItem="DFI-iO-eut" firstAttribute="top" secondItem="o1h-je-saI" secondAttribute="top" constant="-113" id="una-pE-Kqe"/>
                             <constraint firstItem="Gud-fl-zaf" firstAttribute="leading" secondItem="n8l-4e-e6o" secondAttribute="leading" id="x7c-hp-QEN"/>
-                            <constraint firstItem="Mbp-Me-Oik" firstAttribute="centerY" secondItem="n8l-4e-e6o" secondAttribute="centerY" id="yb3-Fo-nGx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="n8l-4e-e6o"/>
                     </view>
@@ -80,7 +80,6 @@
                     <connections>
                         <outlet property="bottomLeftImage" destination="MOi-ef-jK6" id="92h-LD-hwU"/>
                         <outlet property="bottomRightImage" destination="xd8-cI-IbZ" id="ebr-w6-rX6"/>
-                        <outlet property="nameLabel" destination="Mbp-Me-Oik" id="lcx-Zf-wlV"/>
                         <outlet property="topLeftImage" destination="LYO-qa-a4E" id="uWL-Nk-S8X"/>
                         <outlet property="topRightImage" destination="DFI-iO-eut" id="PXL-KF-DdW"/>
                     </connections>
@@ -600,6 +599,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="FOURCORNERS" width="284" height="197"/>
         <image name="bottomLeftBKGD" width="219" height="318"/>
         <image name="bottomRightBGKD" width="194" height="332"/>
         <image name="playerFour" width="414" height="422"/>
