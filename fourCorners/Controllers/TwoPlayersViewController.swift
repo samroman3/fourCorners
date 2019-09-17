@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class TwoPlayersViewController: UIViewController {
+    var pressSound = Sounds.setPressSound()
+    var exitSound = Sounds.setEndGameSound()
+    var startSound = Sounds.setStartSound()
     
     var winners: [Player]? {
         didSet {
@@ -45,6 +49,7 @@ class TwoPlayersViewController: UIViewController {
     
     @IBAction func buttonPress(_ sender: UIButton){
         //Switch to Increase score based on sender.tag of player button
+        pressSound.play()
         Player.increaseScore(player: sender.tag)
         startRoundButton.isHidden = false
         startRoundButton.isEnabled = true
@@ -56,8 +61,12 @@ class TwoPlayersViewController: UIViewController {
         
     }
     
+  
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.navigationBar.isHidden = true
         disableAll()
         promptLabel.isHidden = true
@@ -69,7 +78,7 @@ class TwoPlayersViewController: UIViewController {
     
     
     @IBAction func startGameButtonPressed(_ sender: Any) {
-        
+        startSound.play()
         time = 4
         startGameButton.isEnabled = false
         startGameButton.isHidden = true
@@ -79,7 +88,7 @@ class TwoPlayersViewController: UIViewController {
     @objc func timeAction() {
         promptLabel.isHidden = false
         time -= 1
-        promptLabel.text = String(time)
+        promptLabel.text = " \(time) "
         
         if time == 0 {
             timer.invalidate()
@@ -93,7 +102,7 @@ class TwoPlayersViewController: UIViewController {
     
     
     @IBAction func startRoundButtonPressed(_ sender: Any) {
-        
+        startSound.play()
         time = 4
         enableAll()
         promptLabel.isHidden = true
@@ -107,7 +116,8 @@ class TwoPlayersViewController: UIViewController {
     
     
     @IBAction func exitGameButtonPressed(_ sender: Any) {
-        
+        exitSound.play()
+        sleep(1)
         navigationController?.popToRootViewController(animated: false)
     }
     
