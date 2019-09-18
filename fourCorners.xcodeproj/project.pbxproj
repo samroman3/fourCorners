@@ -24,6 +24,7 @@
 		3A61121C23313F42001F31FE /* synthTwo.wav in Resources */ = {isa = PBXBuildFile; fileRef = 3A61121B23313F42001F31FE /* synthTwo.wav */; };
 		521560C6232FDC1600F2577B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521560C5232FDC1600F2577B /* Timer.swift */; };
 		69072275232FC8CE00514145 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69072274232FC8CE00514145 /* Player.swift */; };
+		EA133EE323326DF000123A50 /* DirectionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA133EE223326DF000123A50 /* DirectionsViewController.swift */; };
 		EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */; };
 		EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
 		EAAC4EC8232FDE5100B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
@@ -75,6 +76,7 @@
 		3A61121B23313F42001F31FE /* synthTwo.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = synthTwo.wav; sourceTree = "<group>"; };
 		521560C5232FDC1600F2577B /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		69072274232FC8CE00514145 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		EA133EE223326DF000123A50 /* DirectionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectionsViewController.swift; sourceTree = "<group>"; };
 		EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyFile.swift; sourceTree = "<group>"; };
 		EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchScreenViewController.swift; path = ../Views/LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -185,6 +187,7 @@
 			children = (
 				EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */,
 				EAAC4ECE23300F1D00B53BE0 /* SettingsViewController.swift */,
+				EA133EE223326DF000123A50 /* DirectionsViewController.swift */,
 				EAAC4ED023300F9F00B53BE0 /* TwoPlayersViewController.swift */,
 				EAAC4ED2233010A100B53BE0 /* ThreePlayersViewController.swift */,
 				3A6111DB232C2214001F31FE /* FourPlayersViewController.swift */,
@@ -373,6 +376,7 @@
 				EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */,
 				EAAC4ED3233010A100B53BE0 /* ThreePlayersViewController.swift in Sources */,
 				EAAC4ED123300F9F00B53BE0 /* TwoPlayersViewController.swift in Sources */,
+				EA133EE323326DF000123A50 /* DirectionsViewController.swift in Sources */,
 				EAAC4ECF23300F1D00B53BE0 /* SettingsViewController.swift in Sources */,
 				3A611213233138F0001F31FE /* Sounds.swift in Sources */,
 				69072275232FC8CE00514145 /* Player.swift in Sources */,

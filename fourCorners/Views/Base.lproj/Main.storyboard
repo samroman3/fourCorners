@@ -42,7 +42,7 @@
                                 <rect key="frame" x="227" y="513" width="242" height="392"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOURCORNERS" translatesAutoresizingMaskIntoConstraints="NO" id="obE-lg-XqY">
-                                <rect key="frame" x="82" y="445" width="250" height="16"/>
+                                <rect key="frame" x="82" y="354.5" width="250" height="197.00000000000006"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="zn5-BL-3Kd"/>
                                 </constraints>
@@ -96,17 +96,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many players? " textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v12-5D-DxK">
-                                <rect key="frame" x="93" y="235" width="228" height="29.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How many players? " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v12-5D-DxK">
+                                <rect key="frame" x="106.5" y="250" width="201" height="25"/>
                                 <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="25"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="xER-vF-MuW">
-                                <rect key="frame" x="79.5" y="334.5" width="255" height="237"/>
+                                <rect key="frame" x="87.5" y="345" width="239" height="216"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="v2w-z7-NDG">
-                                        <rect key="frame" x="0.0" y="0.0" width="255" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="239" height="52"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="40"/>
                                         <state key="normal" title="Two Players ">
                                             <color key="titleColor" red="1" green="0.2692915287618568" blue="0.1893893885535729" alpha="0.84705882352941175" colorSpace="custom" customColorSpace="displayP3"/>
@@ -116,7 +116,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="8KB-dB-Ujg">
-                                        <rect key="frame" x="0.0" y="89" width="255" height="59"/>
+                                        <rect key="frame" x="0.0" y="82" width="239" height="52"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="40"/>
                                         <state key="normal" title="Three Players ">
                                             <color key="titleColor" red="0.97066909069999996" green="0.8148091435" blue="0.37241569159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -126,7 +126,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-Pj-SJK">
-                                        <rect key="frame" x="0.0" y="178" width="255" height="59"/>
+                                        <rect key="frame" x="0.0" y="164" width="239" height="52"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="40"/>
                                         <state key="normal" title="Four Players ">
                                             <color key="titleColor" red="0.059087293280000001" green="0.52018559639999995" blue="0.1031346989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -137,13 +137,25 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YHz-H4-9NP">
+                                <rect key="frame" x="143" y="631" width="128" height="37"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="25"/>
+                                <state key="normal" title="How to play ">
+                                    <color key="titleColor" red="0.34489479360000003" green="0.39669818289999997" blue="0.8105886082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0dV-Fg-1tb" kind="show" id="IfX-b6-iwS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="YHz-H4-9NP" firstAttribute="centerX" secondItem="xER-vF-MuW" secondAttribute="centerX" id="1k6-Y5-t5C"/>
                             <constraint firstItem="xER-vF-MuW" firstAttribute="top" secondItem="v12-5D-DxK" secondAttribute="bottom" constant="70" id="258-Ti-h9F"/>
                             <constraint firstItem="xER-vF-MuW" firstAttribute="centerX" secondItem="WaW-Xx-47h" secondAttribute="centerX" id="3tg-FJ-3db"/>
                             <constraint firstItem="v12-5D-DxK" firstAttribute="centerX" secondItem="xER-vF-MuW" secondAttribute="centerX" id="Eud-Qw-X3r"/>
                             <constraint firstItem="xER-vF-MuW" firstAttribute="centerY" secondItem="WaW-Xx-47h" secondAttribute="centerY" id="Puv-eH-p8t"/>
+                            <constraint firstItem="YHz-H4-9NP" firstAttribute="top" secondItem="xER-vF-MuW" secondAttribute="bottom" constant="70" id="sCH-wv-kSg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WaW-Xx-47h"/>
                     </view>
@@ -468,6 +480,57 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ef7-1A-2o7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3513.04347826087" y="109.82142857142857"/>
+        </scene>
+        <!--Directions View Controller-->
+        <scene sceneID="dA2-4h-7Wp">
+            <objects>
+                <viewController id="0dV-Fg-1tb" customClass="DirectionsViewController" customModule="fourCorners" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3hZ-bQ-J3e">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="How to play " textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xhY-dH-chr">
+                                <rect key="frame" x="105" y="250.5" width="204.5" height="40"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="40"/>
+                                <color key="textColor" red="1" green="0.26929152880000001" blue="0.18938938860000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mDs-C8-7Ir">
+                                <rect key="frame" x="183.5" y="635.5" width="47" height="37"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="25"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" red="0.34489479360000003" green="0.39669818289999997" blue="0.8105886082" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="exitGameButtonPressed:" destination="0dV-Fg-1tb" eventType="touchUpInside" id="wSm-yE-JuS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iR4-c5-aD3">
+                                <rect key="frame" x="20" y="340.5" width="374" height="225"/>
+                                <string key="text">Four Corners is a game about speed, movement, and bringing back the feeling of being a kid at recess.
+
+Complete your task and press your corner before other players to get a point. Player with the most points after 5 rounds is the king of the playground!</string>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iR4-c5-aD3" firstAttribute="centerY" secondItem="p8k-2c-NYH" secondAttribute="centerY" id="4SD-7J-cmP"/>
+                            <constraint firstItem="xhY-dH-chr" firstAttribute="centerX" secondItem="p8k-2c-NYH" secondAttribute="centerX" id="7cc-P3-w5a"/>
+                            <constraint firstItem="mDs-C8-7Ir" firstAttribute="top" secondItem="iR4-c5-aD3" secondAttribute="bottom" constant="70" id="Mkk-yd-92f"/>
+                            <constraint firstItem="iR4-c5-aD3" firstAttribute="top" secondItem="xhY-dH-chr" secondAttribute="bottom" constant="50" id="bag-Du-2DW"/>
+                            <constraint firstItem="iR4-c5-aD3" firstAttribute="leading" secondItem="p8k-2c-NYH" secondAttribute="leading" constant="20" id="ei7-3v-ko3"/>
+                            <constraint firstItem="iR4-c5-aD3" firstAttribute="trailing" secondItem="p8k-2c-NYH" secondAttribute="trailing" constant="-20" id="qIX-Mo-IPZ"/>
+                            <constraint firstItem="mDs-C8-7Ir" firstAttribute="centerX" secondItem="p8k-2c-NYH" secondAttribute="centerX" id="tkC-23-BdW"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="p8k-2c-NYH"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xmc-HD-TvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1973.913043478261" y="784.82142857142856"/>
         </scene>
         <!--Four Players View Controller-->
         <scene sceneID="tne-QT-ifu">
