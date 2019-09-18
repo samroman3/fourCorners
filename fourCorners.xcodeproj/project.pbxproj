@@ -25,6 +25,8 @@
 		520DDD4C23318A0F000C624B /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DDD4B23318A0F000C624B /* Button.swift */; };
 		521560C6232FDC1600F2577B /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521560C5232FDC1600F2577B /* Timer.swift */; };
 		69072275232FC8CE00514145 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69072274232FC8CE00514145 /* Player.swift */; };
+		691608B523318DAF00AE3398 /* menuSave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 691608B423318DAF00AE3398 /* menuSave.wav */; };
+		691608B723318DBD00AE3398 /* timeAudioSave.wav in Resources */ = {isa = PBXBuildFile; fileRef = 691608B623318DBD00AE3398 /* timeAudioSave.wav */; };
 		EAAC4EC5232C3E6400B53BE0 /* emptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */; };
 		EAAC4EC7232C3E6F00B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
 		EAAC4EC8232FDE5100B53BE0 /* Prompt.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */; };
@@ -77,6 +79,8 @@
 		520DDD4B23318A0F000C624B /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		521560C5232FDC1600F2577B /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		69072274232FC8CE00514145 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		691608B423318DAF00AE3398 /* menuSave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = menuSave.wav; path = ../../../../../../../Downloads/menuSave.wav; sourceTree = "<group>"; };
+		691608B623318DBD00AE3398 /* timeAudioSave.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = timeAudioSave.wav; path = ../../../../../../../Downloads/timeAudioSave.wav; sourceTree = "<group>"; };
 		EAAC4EC4232C3E6400B53BE0 /* emptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = emptyFile.swift; sourceTree = "<group>"; };
 		EAAC4EC6232C3E6F00B53BE0 /* Prompt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Prompt.swift; sourceTree = "<group>"; };
 		EAAC4ECC23300E5B00B53BE0 /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = LaunchScreenViewController.swift; path = ../Views/LaunchScreenViewController.swift; sourceTree = "<group>"; };
@@ -174,6 +178,8 @@
 		3A61121423313939001F31FE /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				691608B623318DBD00AE3398 /* timeAudioSave.wav */,
+				691608B423318DAF00AE3398 /* menuSave.wav */,
 				3A61121523313F33001F31FE /* LaunchSound.wav */,
 				3A61121723313F37001F31FE /* synthOne.wav */,
 				3A61121923313F3D001F31FE /* synthThree.wav */,
@@ -338,10 +344,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				691608B523318DAF00AE3398 /* menuSave.wav in Resources */,
 				3A61121823313F37001F31FE /* synthOne.wav in Resources */,
 				3A61121123312513001F31FE /* SignPainter HouseBrush Regular.ttf in Resources */,
 				3A6111E4232C2217001F31FE /* LaunchScreen.storyboard in Resources */,
 				3A6111E1232C2217001F31FE /* Assets.xcassets in Resources */,
+				691608B723318DBD00AE3398 /* timeAudioSave.wav in Resources */,
 				3A61121623313F33001F31FE /* LaunchSound.wav in Resources */,
 				3A61120D233122F9001F31FE /* SignPainter HouseScript Regular.ttf in Resources */,
 				3A61121A23313F3D001F31FE /* synthThree.wav in Resources */,
