@@ -7,18 +7,26 @@ struct Prompt {
     static let mvpPromptArray = [prompt1, prompt2, prompt3, prompt4, prompt5, prompt6, prompt7, prompt8, prompt9, prompt10]
     static func randomPrompt() -> String {
         var usedPrompts = [String()]
-        let newPrompt = Prompt.mvpPromptArray.randomElement()?.prompt
+        var newPrompt = Prompt.mvpPromptArray.randomElement()?.prompt
+        if usedPrompts.count > 10 {
         if !usedPrompts.contains(newPrompt!) {
+            usedPrompts.append(newPrompt!)
+            
+        }
+        return newPrompt!
+        } else {
+            usedPrompts = [String()]
+            newPrompt = Prompt.mvpPromptArray.randomElement()?.prompt
             usedPrompts.append(newPrompt!)
             return newPrompt!
         }
-        else {
-            usedPrompts = [String()]
-            let newNewPrompt = Prompt.mvpPromptArray.randomElement()?.prompt
-            return newNewPrompt!
-            
-        }
-        
+//        else {
+//            usedPrompts = [String()]
+//            let newNewPrompt = Prompt.mvpPromptArray.randomElement()?.prompt
+//            return newNewPrompt!
+//
+//        }
+//
 
     }
     
