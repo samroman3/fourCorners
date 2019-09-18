@@ -13,7 +13,7 @@ class TwoPlayersViewController: UIViewController {
     var pressSound = Sounds.setPressSound()
     var exitSound = Sounds.setEndGameSound()
     var startSound = Sounds.setStartSound()
-    
+    var timerSound = Sounds.setTimerSound()
     var winners: [Player]? {
         didSet {
             
@@ -53,6 +53,7 @@ class TwoPlayersViewController: UIViewController {
     @IBAction func buttonPress(_ sender: UIButton){
         //Switch to Increase score based on sender.tag of player button
         pressSound.play()
+        disableAll()
         Player.increaseScore(player: sender.tag)
         startRoundButton.isHidden = false
         startRoundButton.isEnabled = true
@@ -89,14 +90,15 @@ class TwoPlayersViewController: UIViewController {
         time = 4
         startGameButton.isEnabled = false
         startGameButton.isHidden = true
-        timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 1.1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
+
     }
     
     @objc func timeAction() {
         promptLabel.isHidden = false
+       timerSound.play()
         time -= 1
         promptLabel.text = " \(time) "
-        disableAll()
         
         if time == 0 {
             timer.invalidate()
@@ -113,14 +115,13 @@ class TwoPlayersViewController: UIViewController {
     @IBAction func startRoundButtonPressed(_ sender: Any) {
         startSound.play()
         time = 4
-        enableAll()
         promptLabel.isHidden = true
         exitButton.isHidden = true
         exitButton.isEnabled = false
         startRoundButton.isHidden = true
         startRoundButton.isEnabled = false
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timeAction), userInfo: nil, repeats: true)
-        
+
     }
     
     

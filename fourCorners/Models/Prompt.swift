@@ -13,18 +13,15 @@ struct Prompt {
             return newPrompt!
         } else {
             usedPrompts = [String()]
-           
             let newNewPrompt = Prompt.mvpPromptArray.randomElement()?.prompt
-            usedPrompts.append(newNewPrompt!)
             return newNewPrompt!
             
         }
         
-//    static func nextPrompt(round: Int) -> String {
-//
-//        return Prompt.mvpPromptArray[round].prompt
-//    }
+
     }
+    
+    
 }
 
 
