@@ -13,6 +13,9 @@
         <array key="SignPainter HouseBrush Regular.ttf">
             <string>SignPainterHouseBrush</string>
         </array>
+        <array key="SignPainter HouseSlant Regular.ttf">
+            <string>SignPainterHouseSlant</string>
+        </array>
     </customFonts>
     <scenes>
         <!--Launch Screen View Controller-->
@@ -42,7 +45,7 @@
                                 <rect key="frame" x="227" y="513" width="242" height="392"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOURCORNERS" translatesAutoresizingMaskIntoConstraints="NO" id="obE-lg-XqY">
-                                <rect key="frame" x="82" y="354.5" width="250" height="197.00000000000006"/>
+                                <rect key="frame" x="82" y="445" width="250" height="16"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="250" id="zn5-BL-3Kd"/>
                                 </constraints>
@@ -140,6 +143,14 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9C-Ma-DNv">
+                                <rect key="frame" x="146.5" y="631" width="121" height="37"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseSlant" family="SignPainter HouseSlant" pointSize="25"/>
+                                <state key="normal" title="HOW TO PLAY "/>
+                                <connections>
+                                    <segue destination="EvV-s0-T7d" kind="show" id="A06-IH-Iha"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
                         <constraints>
@@ -147,6 +158,8 @@
                             <constraint firstItem="xER-vF-MuW" firstAttribute="centerX" secondItem="WaW-Xx-47h" secondAttribute="centerX" id="3tg-FJ-3db"/>
                             <constraint firstItem="v12-5D-DxK" firstAttribute="centerX" secondItem="xER-vF-MuW" secondAttribute="centerX" id="Eud-Qw-X3r"/>
                             <constraint firstItem="xER-vF-MuW" firstAttribute="centerY" secondItem="WaW-Xx-47h" secondAttribute="centerY" id="Puv-eH-p8t"/>
+                            <constraint firstItem="l9C-Ma-DNv" firstAttribute="top" secondItem="xER-vF-MuW" secondAttribute="bottom" constant="70" id="jaF-L5-SVC"/>
+                            <constraint firstItem="l9C-Ma-DNv" firstAttribute="centerX" secondItem="WaW-Xx-47h" secondAttribute="centerX" id="lfI-qS-x6X"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WaW-Xx-47h"/>
                     </view>
@@ -202,10 +215,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="F2e-hU-IRa">
-                                <rect key="frame" x="20" y="359" width="374" height="188"/>
+                                <rect key="frame" x="20" y="369" width="374" height="168"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-rY-40v" userLabel="Start Game Button">
-                                        <rect key="frame" x="150.5" y="0.0" width="73" height="47"/>
+                                        <rect key="frame" x="151" y="0.0" width="72" height="42"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="30"/>
                                         <state key="normal" title="Start ">
                                             <color key="titleColor" red="1" green="0.26929152880000001" blue="0.18938938860000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
@@ -216,13 +229,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="promptLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gbx-KX-LnV">
-                                        <rect key="frame" x="101.5" y="47" width="171" height="47"/>
+                                        <rect key="frame" x="110.5" y="42" width="153.5" height="42"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO2-Fq-OT2">
-                                        <rect key="frame" x="102.5" y="94" width="169" height="47"/>
+                                        <rect key="frame" x="113" y="84" width="148" height="42"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="30"/>
                                         <state key="normal" title="Next Round ">
                                             <color key="titleColor" red="0.97066909069999996" green="0.8148091435" blue="0.37241569159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -233,7 +246,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HNJ-MC-6Ml" userLabel="Exit Button">
-                                        <rect key="frame" x="157.5" y="141" width="59" height="47"/>
+                                        <rect key="frame" x="159.5" y="126" width="55" height="42"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="30"/>
                                         <state key="normal" title="Exit ">
                                             <color key="titleColor" red="0.059087293280000001" green="0.52018559639999995" blue="0.1031346989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -472,6 +485,54 @@
             </objects>
             <point key="canvasLocation" x="3513.04347826087" y="109.82142857142857"/>
         </scene>
+        <!--Directions View Controller-->
+        <scene sceneID="aJa-Ns-obJ">
+            <objects>
+                <viewController id="EvV-s0-T7d" customClass="DirectionsViewController" customModule="fourCorners" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i3t-Vg-0f8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOW TO PLAY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ecg-Jk-OIA">
+                                <rect key="frame" x="110.5" y="250.5" width="193" height="40"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="40"/>
+                                <color key="textColor" red="0.78084486722946167" green="0.22128039598464966" blue="0.16464850306510925" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HPW-zJ-4Qo">
+                                <rect key="frame" x="20" y="340.5" width="374" height="225"/>
+                                <string key="text">Four Corners is a game about speed, movement, and bringing back the feeling of being a kid at recess. 
+Complete your task and press your corner before other players to get a point. Player with the most points after 5 rounds is the king of the playground!</string>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rnp-Sz-84v">
+                                <rect key="frame" x="183.5" y="635.5" width="47" height="37"/>
+                                <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="25"/>
+                                <state key="normal" title="back"/>
+                                <connections>
+                                    <action selector="exitGameButtonPressed:" destination="EvV-s0-T7d" eventType="touchUpInside" id="JBB-hO-MBR"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ecg-Jk-OIA" firstAttribute="centerX" secondItem="Izw-zX-S6A" secondAttribute="centerX" id="3Gs-au-CmI"/>
+                            <constraint firstItem="HPW-zJ-4Qo" firstAttribute="centerX" secondItem="Izw-zX-S6A" secondAttribute="centerX" id="GM5-cu-Fv6"/>
+                            <constraint firstItem="HPW-zJ-4Qo" firstAttribute="top" secondItem="ecg-Jk-OIA" secondAttribute="bottom" constant="50" id="Qu8-ev-gwZ"/>
+                            <constraint firstItem="Izw-zX-S6A" firstAttribute="leading" secondItem="HPW-zJ-4Qo" secondAttribute="leading" constant="-20" id="a4f-I8-e3C"/>
+                            <constraint firstItem="rnp-Sz-84v" firstAttribute="centerX" secondItem="Izw-zX-S6A" secondAttribute="centerX" id="goI-PT-Mp1"/>
+                            <constraint firstItem="HPW-zJ-4Qo" firstAttribute="centerY" secondItem="Izw-zX-S6A" secondAttribute="centerY" id="mtR-CI-4WC"/>
+                            <constraint firstItem="rnp-Sz-84v" firstAttribute="top" secondItem="HPW-zJ-4Qo" secondAttribute="bottom" constant="70" id="pdv-zh-Np5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Izw-zX-S6A"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ho0-9E-awm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1959.4202898550727" y="864.50892857142856"/>
+        </scene>
         <!--Four Players View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -565,10 +626,10 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="HWL-Lh-eUG">
-                                <rect key="frame" x="20" y="369" width="374" height="168"/>
+                                <rect key="frame" x="20" y="359" width="374" height="188"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="POC-yC-rnR" userLabel="Start Game Button">
-                                        <rect key="frame" x="151" y="0.0" width="72" height="42"/>
+                                        <rect key="frame" x="150.5" y="0.0" width="73" height="47"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="30"/>
                                         <state key="normal" title="Start ">
                                             <color key="titleColor" red="1" green="0.26929152880000001" blue="0.18938938860000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="displayP3"/>
@@ -578,13 +639,13 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="promptLabel" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n4n-2L-7up">
-                                        <rect key="frame" x="110.5" y="42" width="153.5" height="42"/>
+                                        <rect key="frame" x="101.5" y="47" width="171" height="47"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dq0-ir-xHq">
-                                        <rect key="frame" x="113" y="84" width="148" height="42"/>
+                                        <rect key="frame" x="102.5" y="94" width="169" height="47"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="30"/>
                                         <state key="normal" title="Next Round ">
                                             <color key="titleColor" red="0.97066909069999996" green="0.8148091435" blue="0.37241569159999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -594,7 +655,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zut-Ug-ZHs" userLabel="Exit Button">
-                                        <rect key="frame" x="159.5" y="126" width="55" height="42"/>
+                                        <rect key="frame" x="157.5" y="141" width="59" height="47"/>
                                         <fontDescription key="fontDescription" name="SignPainterHouseBrush" family="SignPainter HouseBrush" pointSize="30"/>
                                         <state key="normal" title="Exit ">
                                             <color key="titleColor" red="0.059087293280000001" green="0.52018559639999995" blue="0.1031346989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
